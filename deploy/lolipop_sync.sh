@@ -63,15 +63,22 @@ fi
 echo "Syncing to lolipop: sftp://${LOLIPOP_USER}@${LOLIPOP_HOST}${LOLIPOP_REMOTE_DIR}"
 
 for item in "${INCLUDES[@]}"; do
-  if [[ -d "${ROOT_DIR}/${item}" ]]; then
-    SRC_PATH="${ROOT_DIR}/${item}"
+  LOCAL_PATH="${ROOT_DIR}/${item}"
+  if [[ -d "${LOCAL_PATH}" ]]; then
+    SRC_PATH="${LOCAL_PATH}"
     DST_PATH="${LOLIPOP_REMOTE_DIR}/${item%/}"
+    lftp -u "${LOLIPOP_USER}","${LOLIPOP_PASS}" "sftp://${LOLIPOP_HOST}" -e "set sftp:auto-confirm yes; set net:timeout 20; set net:max-retries 2; set ssl:verify-certificate no; mirror ${LFTP_MIRROR_FLAGS[*]} \"${SRC_PATH}\" \"${DST_PATH}\"; bye"
+  elif [[ -f "${LOCAL_PATH}" ]]; then
+    base="$(basename "${LOCAL_PATH}")"
+    if [[ "${DRY_RUN}" == "1" ]]; then
+      echo "[dry-run] put \"${LOCAL_PATH}\" -> ${LOLIPOP_REMOTE_DIR}/${base}"
+    else
+      lftp -u "${LOLIPOP_USER}","${LOLIPOP_PASS}" "sftp://${LOLIPOP_HOST}" -e "set sftp:auto-confirm yes; set net:timeout 20; set net:max-retries 2; set ssl:verify-certificate no; cd \"${LOLIPOP_REMOTE_DIR}\"; put \"${LOCAL_PATH}\" -o \"${base}\"; bye"
+    fi
   else
-    SRC_PATH="${ROOT_DIR}/${item}"
-    DST_PATH="${LOLIPOP_REMOTE_DIR}"
+    echo "Error: include not found: ${item}" >&2
+    exit 1
   fi
-
-  lftp -u "${LOLIPOP_USER}","${LOLIPOP_PASS}" "sftp://${LOLIPOP_HOST}" -e "set sftp:auto-confirm yes; set net:timeout 20; set net:max-retries 2; set ssl:verify-certificate no; mirror ${LFTP_MIRROR_FLAGS[*]} \"${SRC_PATH}\" \"${DST_PATH}\"; bye"
 done
 
 echo "Done."

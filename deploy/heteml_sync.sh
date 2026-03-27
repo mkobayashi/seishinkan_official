@@ -114,18 +114,37 @@ run_lftp_mirror() {
   } | lftp
 }
 
+# mirror はディレクトリ向け。単一ファイルは put（「Not a directory」回避）
+run_lftp_put() {
+  local src_file="$1"
+  local remote_dir="$2"
+  local base
+  base="$(basename "$src_file")"
+  if [[ "${DRY_RUN}" == "1" ]]; then
+    echo "[dry-run] put \"${src_file}\" -> ${remote_dir}/${base}"
+    return
+  fi
+  {
+    lftp_settings
+    echo "open ${OPEN_URL}"
+    echo "cd \"${remote_dir}\""
+    echo "put \"${src_file}\" -o \"${base}\""
+    echo "bye"
+  } | lftp
+}
+
 echo "Syncing to heteml (${HETEML_FTP_MODE}): ftp://${HETEML_USER}@${HETEML_HOST}${HETEML_REMOTE_DIR}"
 
 for item in "${INCLUDES[@]}"; do
-  if [[ -d "${ROOT_DIR}/${item}" ]]; then
-    SRC_PATH="${ROOT_DIR}/${item}"
-    DST_PATH="${HETEML_REMOTE_DIR}/${item%/}"
+  LOCAL_PATH="${ROOT_DIR}/${item}"
+  if [[ -d "${LOCAL_PATH}" ]]; then
+    run_lftp_mirror "${LOCAL_PATH}" "${HETEML_REMOTE_DIR}/${item%/}"
+  elif [[ -f "${LOCAL_PATH}" ]]; then
+    run_lftp_put "${LOCAL_PATH}" "${HETEML_REMOTE_DIR}"
   else
-    SRC_PATH="${ROOT_DIR}/${item}"
-    DST_PATH="${HETEML_REMOTE_DIR}"
+    echo "Error: include not found: ${item}" >&2
+    exit 1
   fi
-
-  run_lftp_mirror "${SRC_PATH}" "${DST_PATH}"
 done
 
 echo "Done."
