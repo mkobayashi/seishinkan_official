@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# heteml (staging) sync via SFTP using lftp mirror.
+# heteml (staging) sync via FTPS (FTP over TLS) using lftp mirror.
 #
 # Required env:
 # - HETEML_HOST (e.g. ftp-aikidodev.heteml.net)
@@ -67,7 +67,7 @@ for item in "${INCLUDES[@]}"; do
   echo "${item}" >> "${TMP_INCLUDE_FILE}"
 done
 
-echo "Syncing to heteml: sftp://${HETEML_USER}@${HETEML_HOST}${HETEML_REMOTE_DIR}"
+echo "Syncing to heteml: ftps://${HETEML_USER}@${HETEML_HOST}${HETEML_REMOTE_DIR}"
 
 # lftp include file format: `--include-glob-from` is supported by lftp mirror.
 # We'll run one mirror per include entry to keep behavior predictable.
@@ -80,7 +80,7 @@ for item in "${INCLUDES[@]}"; do
     DST_PATH="${HETEML_REMOTE_DIR}"
   fi
 
-  lftp -u "${HETEML_USER}","${HETEML_PASS}" "sftp://${HETEML_HOST}" -e "set sftp:auto-confirm yes; set net:timeout 20; set net:max-retries 2; set ssl:verify-certificate no; mirror ${LFTP_MIRROR_FLAGS[*]} \"${SRC_PATH}\" \"${DST_PATH}\"; bye"
+  lftp -u "${HETEML_USER}","${HETEML_PASS}" "ftp://${HETEML_HOST}" -e "set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate no; set net:timeout 20; set net:max-retries 2; mirror ${LFTP_MIRROR_FLAGS[*]} \"${SRC_PATH}\" \"${DST_PATH}\"; bye"
 done
 
 echo "Done."
