@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# heteml (staging) sync via FTPS (FTP over TLS) using lftp mirror.
+# heteml (staging) sync via lftp mirror (FTP or FTPS).
 #
 # Required env:
 # - HETEML_HOST (e.g. ftp-aikidodev.heteml.net)
@@ -11,6 +11,10 @@ set -euo pipefail
 #
 # Optional env:
 # - DRY_RUN=1 (prints commands; no changes)
+# - HETEML_FTP_MODE
+#     ftps-force   (default) FTP over TLS, ssl-force
+#     ftps-allow   TLS許可・強制なし（530切り分け）
+#     plain        平文FTP（接続先が許可している場合のみ）
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
@@ -20,6 +24,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 : "${HETEML_REMOTE_DIR:?}"
 
 DRY_RUN="${DRY_RUN:-0}"
+HETEML_FTP_MODE="${HETEML_FTP_MODE:-ftps-force}"
 
 INCLUDES=(
   "about/"
@@ -60,17 +65,57 @@ if [[ "${DRY_RUN}" == "1" ]]; then
   LFTP_MIRROR_FLAGS+=("--dry-run")
 fi
 
-TMP_INCLUDE_FILE="$(mktemp)"
-trap 'rm -f "${TMP_INCLUDE_FILE}"' EXIT
+# ユーザー名・パスワードに記号があっても壊れにくいよう URL エンコード
+heteml_open_url() {
+  HETEML_USER="${HETEML_USER}" HETEML_PASS="${HETEML_PASS}" HETEML_HOST="${HETEML_HOST}" python3 - <<'PY'
+import os, urllib.parse
+u = urllib.parse.quote(os.environ["HETEML_USER"], safe="")
+p = urllib.parse.quote(os.environ["HETEML_PASS"], safe="")
+h = os.environ["HETEML_HOST"]
+print(f"ftp://{u}:{p}@{h}")
+PY
+}
 
-for item in "${INCLUDES[@]}"; do
-  echo "${item}" >> "${TMP_INCLUDE_FILE}"
-done
+OPEN_URL="$(heteml_open_url)"
 
-echo "Syncing to heteml: ftps://${HETEML_USER}@${HETEML_HOST}${HETEML_REMOTE_DIR}"
+lftp_settings() {
+  echo "set net:timeout 30"
+  echo "set net:max-retries 5"
+  echo "set ssl:verify-certificate no"
+  case "${HETEML_FTP_MODE}" in
+    ftps-force)
+      echo "set ftp:ssl-allow yes"
+      echo "set ftp:ssl-force yes"
+      echo "set ftp:ssl-protect-data yes"
+      ;;
+    ftps-allow)
+      echo "set ftp:ssl-allow yes"
+      echo "set ftp:ssl-force no"
+      echo "set ftp:ssl-protect-data yes"
+      ;;
+    plain)
+      echo "set ftp:ssl-allow no"
+      ;;
+    *)
+      echo "Unknown HETEML_FTP_MODE=${HETEML_FTP_MODE}" >&2
+      exit 1
+      ;;
+  esac
+}
 
-# lftp include file format: `--include-glob-from` is supported by lftp mirror.
-# We'll run one mirror per include entry to keep behavior predictable.
+run_lftp_mirror() {
+  local src_path="$1"
+  local dst_path="$2"
+  {
+    lftp_settings
+    echo "open ${OPEN_URL}"
+    echo "mirror ${LFTP_MIRROR_FLAGS[*]} \"${src_path}\" \"${dst_path}\""
+    echo "bye"
+  } | lftp
+}
+
+echo "Syncing to heteml (${HETEML_FTP_MODE}): ftp://${HETEML_USER}@${HETEML_HOST}${HETEML_REMOTE_DIR}"
+
 for item in "${INCLUDES[@]}"; do
   if [[ -d "${ROOT_DIR}/${item}" ]]; then
     SRC_PATH="${ROOT_DIR}/${item}"
@@ -80,8 +125,7 @@ for item in "${INCLUDES[@]}"; do
     DST_PATH="${HETEML_REMOTE_DIR}"
   fi
 
-  lftp -u "${HETEML_USER}","${HETEML_PASS}" "ftp://${HETEML_HOST}" -e "set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate no; set net:timeout 20; set net:max-retries 2; mirror ${LFTP_MIRROR_FLAGS[*]} \"${SRC_PATH}\" \"${DST_PATH}\"; bye"
+  run_lftp_mirror "${SRC_PATH}" "${DST_PATH}"
 done
 
 echo "Done."
-

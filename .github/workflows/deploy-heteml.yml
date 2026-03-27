@@ -40,12 +40,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y lftp
 
-      - name: Deploy (SFTP mirror)
+      - name: Deploy (FTP/FTPS mirror)
         env:
           HETEML_HOST: ${{ secrets.HETEML_HOST }}
           HETEML_USER: ${{ secrets.HETEML_USER }}
           HETEML_PASS: ${{ secrets.HETEML_PASS }}
           HETEML_REMOTE_DIR: ${{ secrets.HETEML_REMOTE_DIR }}
+          # 任意: 530 のとき `ftps-allow` または `plain` を試す（未設定なら ftps-force）
+          HETEML_FTP_MODE: ${{ secrets.HETEML_FTP_MODE }}
         run: |
           bash deploy/heteml_sync.sh
 
