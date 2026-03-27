@@ -16,9 +16,9 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
       <div class="row">
         <div class="col-xs-12 local-header-img">
           <div id="local-header-fade" class="crossfader">
-          <img src="image/cl/class_01.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
-          <img src="image/cl/class_02.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
-          <img src="image/cl/class_03.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
+          <img src="/image/cl/class_01.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
+          <img src="/image/cl/class_02.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
+          <img src="/image/cl/class_03.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
           </div>
           <div class="class-slider-icon ryu-mincho" aria-hidden="true">
             <div class="class-slider-icon__inner">動</div>
@@ -59,8 +59,8 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
       <div class="row">
         <div class="col-xs-12 local-header-img">
           <div id="local-header-fade-ki" class="crossfader">
-            <img src="image/cl/ki.jpg" class="img-responsive" alt="氣圧法クラス（静）の稽古風景">
-            <img src="image/cl/ki_02.jpg" class="img-responsive" alt="氣圧法クラス（静）の稽古風景">
+            <img src="/image/cl/ki.jpg" class="img-responsive" alt="氣圧法クラス（静）の稽古風景">
+            <img src="/image/cl/ki_02.jpg" class="img-responsive" alt="氣圧法クラス（静）の稽古風景">
           </div>
           <div class="class-slider-icon class-slider-icon--ki ryu-mincho" aria-hidden="true">
             <div class="class-slider-icon__inner">静</div>
