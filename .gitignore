@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# WordPress（本番の秘密情報・巨大データを除外）
+wp/wp-config.php
+wp/wp-content/uploads/
+wp/wp-content/upgrade/
+wp/wp-content/cache/
+wp/wp-content/backup*/
+wp/wp-content/debug.log
+
+# 任意：ローカルだけの設定がある場合
+# wp/wp-content/themes/*/node_modules/

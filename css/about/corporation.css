@@ -1,0 +1,483 @@
+.talk {
+    font-weight: bold;
+}
+.corp-info {
+    margin-bottom: 100px;
+}
+
+
+@media (min-width: 768px) {
+    .talk-table >tbody>tr>td {
+        padding: 20px;
+    }
+}
+
+.corp.title {
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .corp.title {
+        margin-bottom: 90px;
+    }
+}
+
+.corp-label {
+    background-color:  rgba(14, 128, 105, 0.8);
+
+}
+
+@media (min-width: 768px) {
+    .corp-label {
+        width: 290px;
+        height: 102px;
+        position: absolute;
+        top: 93px;
+        left: 0;
+    }
+}
+
+.corp-label h1 {
+    font-size: 32px;
+    line-height: 102px;
+    margin: 0px;
+}
+
+
+.corp-history >div {
+    /*margin-bottom: 20px; */
+}
+@media (max-width: 768px) {
+    .corp-history {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+.corp.history-bg {
+    width: 100%;
+    height: 635px;
+}
+
+.corp.history-bg.line {
+    background-color:  #9ec7b1;
+    width: 12px;
+    height: 582px;
+}
+
+@media (min-width: 768px) {
+    .corp.history-bg.line {
+        position: absolute;
+        top: 27px;
+        left: 50%;
+        margin-left: -6px;
+    }
+}
+
+.corp.history {
+    max-width: 520px;
+    clear:both;
+}
+
+.corp.history div {
+    float:left;
+    max-width: 490px;
+}
+
+
+.corp.history>.line {
+    border-bottom: 1px solid #1bad90;
+    width: 30px;
+    height: 35px;
+}
+
+.corp.history img {
+        max-width: 205px;
+}
+
+
+@media (min-width: 992px) {
+    .corp.history {
+        width: 520px;
+    }
+    .corp.history.right {
+        position: absolute;
+        left: 50%;
+        margin-left:6px;
+    }
+    .corp.history.left {
+        position: absolute;
+        right: 50%;
+        margin-right: 6px;
+    }
+
+    .corp.history.left div.line {
+        float:right;    
+    }
+
+    .corp.history.left div.text {
+        float:right;
+    }
+
+    .corp.history.left h3 {
+        text-align:right;
+    }
+
+    .corp.history img {
+        margin-top: 20px;
+
+    }
+
+    .corp.history.img div {
+        max-width: 270px;
+    }
+
+    .corp.history.img.left p {
+        padding-left: 20px;
+    }
+
+    .corp.history.img.right p {
+        padding-right: 20px;
+    }
+
+    
+    .corp.history.y1974 {
+        top: 35px;
+    }
+
+    .corp.history.y1980 {
+        top: 100px;
+    }
+
+    .corp.history.y1990 {
+        top: 190px;
+    }
+
+    .corp.history.y2007 {
+        top: 280px;
+    }
+
+    .corp.history.y2010 {
+        top: 354px;
+    }
+
+    .corp.history.y2011 {
+        top: 424px;
+    }
+
+    .corp.history.y2014 {
+        top: 458px;
+    }
+}
+
+@media (max-width: 767px) {
+    .corp.history h3 {
+        font-size: 16.8px;
+        margin-bottom: 5px;
+    }
+}
+
+.corp-board >ul {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+@media (min-width: 992px) {
+    .corp-board >ul>li {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.corp-board >ul>li>img {
+    margin-left: auto;
+    margin-right: auto;    
+}
+.corp-board >ul>li>h4 {
+    font-size: 16px;
+    font-weight: bold;
+    height: 52px;
+    width: 100%;
+    display: table-cell;
+    vertical-align:bottom;
+    padding-bottom: 8px;
+    padding-left: 10px;
+
+}
+
+.corp-board >ul>li>h4>small {
+    color: #067564;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.corp-board >ul>li>p {
+    border-top: 1px solid #dbdbdb;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+}
+
+
+.corp-organization {
+    margin-bottom: 30px;
+}
+
+.corp-organization  div.parts {
+    border-radius: 5px;
+    border: 1px solid #9ec7b1;
+}
+
+.corp-organization h3 {
+    font-size: 22px;
+}
+
+.corp-organization div.line {
+    width: 50%;
+    height: 35px;
+    border-right: 10px solid #cde09b;
+    margin-left: 5px;
+}
+
+.corp-organization div.line.max {
+    height: 126px;
+}
+
+@media (max-width: 767px) {
+    .corp-organization h3 {
+        margin-top: 15px;
+        margin-bottom: 15px;        
+    }
+
+    /* deleted on 2015/12
+    .corp-organization div.line.max {
+        height: 96px;
+    }
+   */
+}
+
+.corp-headq h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:35px;
+}
+
+.corp.headq.table >tbody>tr>td{
+    border-top: 0px;
+}
+
+.corp.headq.table >tbody>tr>td:nth-child(2){
+    border-left:1px solid #dbdbdb;
+    padding-left: 20px;
+}
+
+
+.corp-headq > div {
+    padding-bottom:20px;
+    margin-bottom: 20px;
+}
+
+.corp-headq > div.no-border {
+    border-bottom: 0px;
+}
+
+.corp.headq.access div.label-info{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.corp.headq.access h3 {
+    margin-bottom: 20px;
+}
+
+.corp.headq.access table>tbody>tr>td {
+    padding: 15px;
+    border-top: 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+    .corp.headq.access table>tbody>tr>td {
+        padding: 30px;
+    }
+}
+
+.corp.headq.access table>tbody>tr>td.no-border {
+    border-bottom: 0px;
+}
+
+@media (max-width: 767px) {
+    .corp.headq.access table>tbody>tr>td {
+        display:block;
+        float:left;
+    }
+
+    .corp.headq.access table>tbody>tr>td.title {
+        border-bottom:0px;
+    }
+}
+
+/*****  スマホ修正分 2015.11 ここから *****/
+.corp.title {
+    margin-bottom: -2px;
+}
+
+@media (min-width: 768px) {
+    .corp.title {
+        margin-bottom: 90px;
+    }
+}
+
+.corp-label h1 {
+    font-size: 24px;
+    line-height: 58px;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .corp-label h1 {
+        font-size: 32px;
+        line-height: 102px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .local-header-title {
+        padding-top: 10px;
+        padding-bottom: 5px;
+        height: 100%;
+    }
+
+    .local-header-title h2 {
+        margin-top: 0;
+    }
+
+    .sta-space {
+        margin-bottom: 0;
+    }
+
+    .sta-space-md, .sta-space-sm {
+        margin-bottom: 5px;
+    }
+
+    .btnlink2 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .corp-info {
+        margin-bottom: 0;
+    }
+
+    .corp.headq.access {
+        margin-bottom: 0;
+    }
+
+    .corp.headq.access + div {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .corp.headq.access table {
+        margin-bottom: 0;
+    }
+
+    .corp-board >ul>li.last>p {
+        padding-bottom: 10px;
+    }
+}
+/*****  スマホ修正分 2015.11 ここまで *****/
+
+/*****  栃木総本部へのアクセス 2015.12　三好 *****/
+span.red{
+    color: red;
+}
+@media (min-width: 767px) {
+    #access_info{
+        margin-bottom: -100px
+    }
+}/*PC画面時の余分な余白削除*/
+
+#access_info h3{
+    color: #067564;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+#access_info h3.under_line{
+    color: #067564;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 30px;
+}
+#access_info p{
+    margin-right: 15px;
+    margin-left: 15px;
+
+/*表組みの背景色などの設定*/
+}
+#access_info table.access{
+    border-color:#dbdbdb;
+    margin-bottom: 50px;
+    border-left: white;
+    border-right:white;
+     border-top: #dbdbdb;
+    border-bottom:#dbdbdb;
+}
+#access_info table.access tr th{
+    text-align: center;
+    font-color: #383838;
+}
+#access_info table.access tr td{
+    text-align: center;
+    font-color: #383838;
+}
+
+#access_info table.access tr th.mainhead{
+    background:#e6eeea;
+}
+#access_info table.access tr th.timehead{
+    background:#f5f8f7;
+}
+/*表組みの背景色などの設定*/
+
+/*表組みの余分な罫線削除の設定*/
+#access_info table.access tr th.leftnone{
+    border-left:none;
+}
+#access_info table.access tr th.rightnone{
+    border-right:none;
+}
+#access_info table.access tr td.rightnone{
+    border-right:none;
+}
+/*表組みの余分な罫線削除の設定*/
+
+/*栃木総本部アクセスへのボタンの設定*/
+.access_to_tochigi a.btn-access{
+    font-size: 11px!important;
+}
+@media (max-width: 965px) {
+    .access_to_tochigi{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block!important;
+        text-align: center!important;
+        margin-bottom: 20px;
+    }
+    .access_to_tochigi a.btn-access{
+        display: inline-block!important;
+        text-align: center!important;
+        
+    }
+}
+/*栃木総本部アクセスへのボタンの設定*/
+
+/*****  栃木総本部へのアクセス 2015.12　三好 *****/

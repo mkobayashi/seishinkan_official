@@ -1,0 +1,5 @@
+table.sitepolicy.table >tbody>tr>th,table.sitepolicy.table >tbody>tr>td {
+    border:0px;
+    padding-top: 15px;
+    padding-bottom: 15px;    
+}

@@ -1,0 +1,77 @@
+/* ロゴサイズ, GreenLineに合わせて変更 */
+.navbar-brand {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .navbar-nav.header-link>li>a {
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-brand {
+        max-width:215px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .navbar-nav>li>a {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 80%;
+    }
+
+    .navbar-nav>li>a .btn{
+        padding: 6px 6px;
+        font-size: 60%;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-brand {
+        max-width:260px;
+        padding-left: 10px;
+    }
+    
+    .navbar-nav>li>a {
+        font-size: 80%;
+    }
+
+    .navbar-nav>li>a .btn{
+        padding: 6px 6px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .navbar-brand {
+        max-width:240px;
+        padding-left: 10px;
+        padding-top: 20px;
+    }
+}
+
+/* 文字色を変更 */
+.label-info {
+    color: #067564;
+}
+
+.label {
+    font-size: 90%;
+}

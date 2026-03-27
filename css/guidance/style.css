@@ -1,0 +1,47 @@
+.guidance >div {
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .guidance >div {
+        margin-bottom: 50px;
+    }
+}
+
+.guidance .title {
+    width: 100%; /* dummy */
+    width: -webkit-calc(100% + 30px);
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
+    border-top: 1px solid #218e78;
+    border-bottom: 1px solid #cccccc;
+}
+
+@media (max-width: 767px) {
+    .guidance .title {
+        padding-left: 15px;
+    }
+}
+
+.guidance .title h4 {
+    font-weight: bold;
+    padding: 15px 0px;
+    margin: 0px;
+}
+
+.guidance .title {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .guidance .title {
+        margin-bottom: 30px;
+    }
+
+    .guidance .title h4 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+}

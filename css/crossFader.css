@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/*crossFader*/
+.crossfader{
+    position: relative;
+    height: 605px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    
+}
+
+.crossfader img{
+    width: 100%;
+    height:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:8;
+	opacity:0;
+	cursor:pointer;
+
+}
+
+.crossfader .active{
+	z-index:10;
+	opacity:1.0;
+}
+
+.crossfader .last-active{
+	z-index:9;
+}
+
+.crossfader .startBtn{
+	position:absolute;
+	bottom:10px;
+	left: 10px;
+	z-index:100;
+}
+
+.crossfader .startBtn a{
+	display:block;
+	padding:3px 8px;
+	background-color:#FFF;
+}
+
+/*crossFader*/
+div#img_fader{
+    position: relative;
+    height: 605px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+div#img_fader ul li img{
+    width: 100%;
+    
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:8;
+	opacity:0;
+	cursor:pointer;
+}
+
+div#img_fader .active{
+	z-index:10;
+	opacity:1.0;
+}
+
+div#img_fader .last-active{
+	z-index:9;
+}
+
+div#img_fader .startBtn{
+	position:absolute;
+	bottom:10px;
+	left: 10px;
+	z-index:100;
+}
+
+div#img_fader .startBtn a{
+	display:block;
+	padding:3px 8px;
+	background-color:#FFF;
+}

@@ -1,0 +1,187 @@
+.contact >div>div>p {
+    padding-left: 15px;
+}
+
+.contact .title-radio {
+    background-color:  #f4f4ec;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .contact .title-radio {
+        padding: 20px 30px;
+        margin-top: 30px;
+        margin-bottom: 45px;
+    }
+}
+
+.contact .title-radio>div {
+    width: 100%; /* dummy */
+    width: -webkit-calc(100% + 30px) ;
+    width: calc(100% + 30px);
+}
+
+.contact .title-radio label{
+    font-weight: bold;
+}
+
+.contact .title-radio input[type=radio] {
+    display: inline-block;
+    margin-right: 6px;
+}
+.contact .title-radio input[type=radio] + label {
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: pointer;
+}
+ 
+@media (min-width: 1px) {
+    .contact .title-radio input[type=radio] {
+        display: none;
+        margin: 0;
+    }
+    .contact .title-radio input[type=radio] + label {
+        padding: 0 0 0 24px;
+    }
+    .contact .title-radio input[type=radio] + label::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-top: -8px;
+        background-color: white;
+    }
+    .contact .title-radio input[type=radio] + label::before {
+
+        background-color: #dedede;
+        box-shadow: 0px 1px 0px 0px #fff;
+        border: 2px solid #d2d7d9;
+        border-radius: 30px;
+    }
+    .contact .title-radio input[type=radio]:checked + label::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+    }
+    .contact .title-radio input[type=radio]:checked + label::after {
+        left: 5px;
+        width: 6px;
+        height: 6px;
+        margin-top: -3px;
+        background: #218e78;
+        box-shadow: 0px 1px 2px 0px rgba(99, 99, 99, 0.82);
+        border-radius: 6px;
+    }
+}
+
+.contact div.detail {
+    background-color:  #f5f8f7;
+}
+
+.contact .detail .form-group {
+    margin-bottom: 0px;
+    padding: 8px 15px;
+    border-bottom: 1px dashed #c9c9c9;
+}
+
+@media (min-width: 768px) {
+    .contact div.detail {
+        padding-top: 12px;
+    }
+}
+
+
+
+.contact .detail .form-group.bottom {
+    border-bottom: 0px;
+}
+
+
+.contact .detail .form-control {
+    border-radius: 0px;
+    border-color: #d1d1d0;
+    font-size: 16px;
+}
+
+
+.contact .detail .form-control-static {
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.contact .detail input[type=text].form-control {
+    height: 40px;
+}
+
+.contact .detail label.control-label {
+    text-align: left;
+    font-size: 16px;
+    color:  #067564;
+}
+
+@media (min-width: 768px) {
+    .contact .detail label.control-label {
+        padding-top: 10px;
+    }
+}
+
+.contact .detail label.control-label>span.text-danger {
+    font-weight: normal;
+}
+
+.contact .detail .zipcode {
+    float: left;
+}
+
+.contact .detail span.zipcode {
+    font-weight: bold;
+    color:  #067564;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contact .detail input#zipcode1 {
+    width: 94px;
+}
+
+.contact .detail input#zipcode2 {
+    width: 121px;
+}
+
+.contact .detail .form-group.action {
+    
+}
+
+.contact .detail .form-group.action .btn {
+    padding: 15px 35px;
+    margin: 5px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+@media (min-width: 768px) {
+    .contact .detail .form-group.action .btn {
+        margin: 40px 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact .detail .form-group.action .btn {
+        width: 100%;
+    }
+}
+

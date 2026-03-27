@@ -1,0 +1,186 @@
+
+@media (min-width: 1200px)
+.local-label.greeting {
+    left: 5%;
+    bottom: 20%;
+}
+
+.succ-carousel .carousel img {
+    width: 50%;
+    float: left;
+}
+
+@media (min-width: 1200px) {
+    .succ-carousel .carousel {
+        width: 1200px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .succ-carousel .carousel img {    
+        width: 600px;
+    }
+}
+
+.succ-carousel .carousel-inner>a.carousel-control{
+    background-color:#fff ! important;
+}
+
+
+.succ-history >div {
+    /*margin-bottom: 20px; */
+    margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+    .corp-history {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+.succ.history-bg {
+    width: 100%;
+    height: 700px;
+}
+
+.succ.history-bg.line {
+    background-color:  #9ec7b1;
+    width: 12px;
+    height: 640px;
+}
+
+@media (min-width: 768px) {
+    .succ.history-bg.line {
+        position: absolute;
+        top: 27px;
+        left: 50%;
+        margin-left: -6px;
+    }
+}
+
+.succ.history {
+    max-width: 520px;
+    clear:both;
+}
+
+.succ.history div {
+    float:left;
+    max-width: 490px;
+}
+
+
+.succ.history>.line {
+    border-bottom: 1px solid #1bad90;
+    width: 30px;
+    height: 35px;
+}
+
+.succ.history img {
+        max-width: 205px;
+}
+
+
+@media (min-width: 992px) {
+    .succ.history {
+        width: 520px;
+    }
+    .succ.history.right {
+        position: absolute;
+        left: 50%;
+        margin-left:6px;
+    }
+    .succ.history.left {
+        position: absolute;
+        right: 50%;
+        margin-right: 6px;
+    }
+
+    .succ.history.left div.line {
+        float:right;    
+    }
+
+    .succ.history.left div.text {
+        float:right;
+    }
+
+    .succ.history.left h3 {
+        text-align:right;
+    }
+
+    .corp.history img {
+        margin-top: 20px;
+
+    }
+
+    .succ.history.img div {
+        max-width: 270px;
+    }
+
+    .succ.history.img.left p {
+        padding-left: 20px;
+    }
+
+    .succ.history.img.right p {
+        padding-right: 20px;
+    }
+
+    
+    .succ.history.y1973 {
+        top: 35px;
+    }
+
+    .succ.history.y1993 {
+        top: 90px;
+    }
+
+    .succ.history.y1997 {
+        top: 170px;
+    }
+    .succ.history.y2000 {
+        top: 220px;
+    }
+
+    .succ.history.y2007 {
+        top: 300px;
+    }
+    .succ.history.y2008 {
+        top: 360px;
+    }
+
+    .succ.history.y2010 {
+        top: 440px;
+    }
+
+    .succ.history.y2011 {
+        top: 480px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .succ.history h3 {
+        font-size: 16.8px;
+        margin-bottom: 5px;
+    }
+}
+
+/*****  スマホ修正分 2015.11 ここから *****/
+@media (max-width: 767px) {
+    .local-label {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+}
+/*****  スマホ修正分 2015.11 ここまで *****/
+
+/* added on 2015/12/20 */
+@media (min-width: 1200px) {
+    .local-label.succ {
+        top: 35%;
+        right: 5%;
+    }
+}
+
+.succ-history {
+    padding-left: 30px;
+    padding-right: 30px;
+}

@@ -1,0 +1,203 @@
+
+.entry-exp {
+    margin-bottom: 100px;
+}
+
+
+@media (min-width: 992px) {
+    .entry-exp > div.left {
+        padding-right: 50px;
+    }
+
+    .entry-exp > div.right {
+        padding-left: 50px;
+    }
+}
+
+.entry-exp > div > div {
+    /* height: 272px; */
+}
+
+@media (min-width:768px) {
+    .entry-exp .sta-square {
+        padding-top:30px;
+        width: 100%;
+        padding-bottom: 100%;
+    }
+
+    .entry-exp .in {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .entry-exp > div > div > div.sta-square {
+        padding-bottom: 0px;
+    }
+    .entry-exp > div > div > div.in {
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+}
+
+.entry-exp h2 {
+    margin: 20px 25px 25px 30px;
+    font-size: 26px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 2px;
+}
+
+.entry-exp p {
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+
+@media (min-width: 992px) {
+    .entry-exp h2 {
+        margin: 20px 20px 10px 20px;
+        font-size: 22px;
+    }
+
+    .entry-exp p {
+        margin-left: 20px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .entry-exp h2 {
+        margin: 20% 25px 25px 30px;
+        font-size: 26px;
+    }
+
+    .entry-exp p {
+        margin-left: 30px;
+    }
+}
+
+.entry-exp > .arrow {
+    font-size: 50px;
+    color: #9ec7b1;
+}
+
+
+@media (min-width: 992px) {
+    .entry-exp > .arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -25px;
+        margin-left: -25px;
+    }
+}
+
+
+.entry-price {
+    color:  rgba(33, 142, 120, 0.9);
+}
+
+.entry-price div.price {
+    border-radius: 10px;
+    background-color:  rgba(245, 245, 193, 0.9);
+    padding: 30px;
+
+}
+/*0126三好追加 会費の部分に関する修正*/
+.entry-price div.upspacing{
+    margin-top: 2.5em;
+}
+.entry-price div.price ul.small{
+    padding-top: 15px;
+}
+/*0126三好追加 会費の部分に関する修正*/
+
+@media (min-width: 768px) {
+    .entry-price div.price {
+        min-height: 105px;
+    }
+}
+
+.entry-price div.price h3 {
+    line-height: 45px;
+    margin: 0px;
+}
+
+.entry-price div.price h3, .entry-price div.price h4 {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.entry-price p {
+    margin-bottom: 5px;
+}
+
+.entry-price div.price h3 > small {
+    color:  rgba(33, 142, 120, 0.9);
+}
+
+.entry-price div span {
+    margin-top: 40px;
+    font-size: 50px;
+    line-height: 105px;
+}
+
+@media (min-width: 768px) {
+    .entry-price div.price .title {
+        margin-left: 20px;
+    }
+
+    .entry-price div.price div.title {
+        float: left;
+    }
+
+
+    .entry-price div.price div.text {
+        float:left;
+        margin-left: 25px;
+    }
+}
+
+
+.entry-price div.price li.title {
+    width: 180px;
+}
+
+.entry-price div.price li.title h4 {
+    margin: 0;
+}
+
+.entry-price div.price li.text {
+    margin-left: 20px;
+}
+
+@media (max-width: 991px) {
+    .entry-price div.price li.title {
+        display: block;
+    }
+}
+
+/*****  スマホ修正分 2015.11 ここから *****/
+@media (max-width: 767px) {
+    .entry-exp {
+        margin-bottom: 0;
+    }
+
+    .sta-fixspace-sm {
+        margin-bottom: 0;
+    }
+}
+/*****  スマホ修正分 2015.11 ここまで *****/
+
+/* added on 2015/12 */
+@media (min-width: 1200px) {
+    .local-label.entry {
+        top: 11%;
+        right: 4%;
+    }
+}

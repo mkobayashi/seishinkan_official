@@ -1,0 +1,54 @@
+.dojo-search {
+    padding: 20px;
+    
+}
+
+.dojo-search .form-group {
+    padding-left: 8px;
+    padding-right: 8px;    
+    
+}
+.dojo-search .form-group>div{
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.dojo-search input, .dojo-search .form-control {
+    width: 100%;
+    height: 46px;
+    font-size: 18px;    
+}
+
+.dojo-search .form-control {
+    border-color: #8bc899;
+}
+
+.dojo-search .keywordbox {
+    margin-top: 5px;
+    margin-bottom: 4px;
+}
+.dojo-search input#search {
+    height: 37px;
+    background-color:  #f5f5ee;
+}
+
+ .dojo-search select#search-country, .dojo-search select#search-prefecture {
+
+    background-color: #8bc899;
+    color: #fff;
+ }
+
+
+.dojo-search form input.btn {
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dojo-search form div.dojobtn {
+    padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .dojo-search form div.dojobtn {
+        padding-top: 50px;
+    }
+}

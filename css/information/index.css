@@ -1,0 +1,56 @@
+/***** 沓掛追加分 *****/
+.noSearch{
+  padding:0;
+}
+.noSearch p{
+  padding:20px 0 20px 0px;
+  text-align:center;
+}
+
+/*****  スマホ・タブレット修正分 2015.12 ここから 三好 *****/
+@media (max-width: 1200px) {
+
+	tr td.date{
+      width:auto;
+      margin-right: -20px;
+    }/*タブレット(横向き)版での日付の不自然な改行の調整*/
+}
+
+@media (max-width: 767px) {
+
+	tr td.date{
+      width:auto;
+      margin-right: -20px;
+    }/*タブレット版での日付の不自然な改行の調整*/
+
+    span.label{
+      display: block;
+      float: right;
+    }/*タブレット版でのラベルを右側配置に揃える調整*/
+
+    .clear{
+    	clear:both;　/*floatの解除*/
+	}
+}
+
+@media (max-width: 500px) {
+
+    tr td.date{
+      width:auto;
+      margin-right: -60px;
+    }/*SP版での日付の不自然な改行の調整*/
+
+    span.label{
+      display: block;
+      float: right;
+    }/*SP版でのラベルを右側配置に揃える調整*/
+
+    .clear{
+    	clear:both;　/*floatの解除*/
+	}
+
+}
+
+
+
+/*****  スマホ・タブレット修正分 2015.12 三好 ここまで *****/

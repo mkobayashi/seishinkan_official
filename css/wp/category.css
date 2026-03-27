@@ -1,0 +1,9 @@
+ul#pagenation{
+  list-style-type:none;
+}
+ul#pagenation li.first{
+  text-align:left;
+}
+ul#pagenation li.second{
+  text-align:right;
+}

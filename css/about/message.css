@@ -1,0 +1,54 @@
+@media (max-width: 767px) {
+    .local-label.message {
+        margin-left: 40px;
+    }
+    .local-label.message h3 {
+        font-size: 17.6px;
+        margin: 5px 0px;
+    }
+
+    .local-label.message h1 {
+        margin: 0px;
+        font-size: 25.6px;
+    }
+
+}
+
+
+.img-greeting {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.local-intro.message {
+    padding-bottom: 80px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.message-profile {
+    margin-top: 60px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    border:  solid 1px #dbdbdb;
+    background-color:  #f4f4f4;
+}
+
+.message-profile div div {
+    width: 100%;
+    margin-top: -5px;
+    color: #fff;
+}
+
+.message-profile div span {
+    width: 100%;
+    font-size: 18px;
+}
+
+/* added on 2018/01 */
+@media (min-width: 1200px) {
+    .local-label.message {
+     left: 5%;
+    bottom: 20%;
+    }
+
+}
