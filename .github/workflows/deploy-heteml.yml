@@ -1,0 +1,48 @@
+name: Deploy to heteml (staging)
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "about/**"
+      - "class/**"
+      - "css/**"
+      - "en/**"
+      - "entry/**"
+      - "fonts/**"
+      - "guidance/**"
+      - "image/**"
+      - "js/**"
+      - "templates/**"
+      - ".htaccess"
+      - "index.php"
+      - "favicon.ico"
+      - "favicon-*.png"
+      - "apple-touch-icon.png"
+      - "android-chrome-*.png"
+      - "browserconfig.xml"
+      - "deploy/**"
+      - ".github/workflows/deploy-heteml.yml"
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
+      - name: Deploy (SFTP mirror)
+        env:
+          HETEML_HOST: ${{ secrets.HETEML_HOST }}
+          HETEML_USER: ${{ secrets.HETEML_USER }}
+          HETEML_PASS: ${{ secrets.HETEML_PASS }}
+          HETEML_REMOTE_DIR: ${{ secrets.HETEML_REMOTE_DIR }}
+        run: |
+          bash deploy/heteml_sync.sh
+
