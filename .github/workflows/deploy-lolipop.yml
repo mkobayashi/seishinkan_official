@@ -1,0 +1,25 @@
+name: Deploy to lolipop (production)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
+      - name: Deploy (SFTP mirror)
+        env:
+          LOLIPOP_HOST: ${{ secrets.LOLIPOP_HOST }}
+          LOLIPOP_USER: ${{ secrets.LOLIPOP_USER }}
+          LOLIPOP_PASS: ${{ secrets.LOLIPOP_PASS }}
+          LOLIPOP_REMOTE_DIR: ${{ secrets.LOLIPOP_REMOTE_DIR }}
+        run: |
+          bash deploy/lolipop_sync.sh
+
