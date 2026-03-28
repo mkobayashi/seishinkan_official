@@ -1,4 +1,4 @@
-<!-- Footer Contents -->
+<!-- 共通フッター: 地図用スクリプト → page-top → <footer> -->
     <script>
 $(function(){
     if (typeof drawGMap === 'function' && $('div.ggmap.mapdisplay').length) {

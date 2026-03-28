@@ -142,7 +142,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
         </div>
       </div>
     </div>
-<!-- Footer Contents -->
+<!-- 見学・無料体験 CTA（#page-top 以降は templates/footer.php） -->
     <div class="container">
       <div class="row btnlink2">
         <a href="http://www.seishinkan.org/reserve/"><div class="col-xs-12 col-lg-8 col-lg-push-2 text-center yu-gothic">
@@ -154,5 +154,4 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
       </div>
     </div>
 
-<!--　contents end footer start（#page-top は templates/footer.php に集約） -->
- <?php include( $_SERVER['DOCUMENT_ROOT'] . '/templates/footer.php'); ?>
+<?php include( $_SERVER['DOCUMENT_ROOT'] . '/templates/footer.php'); ?>

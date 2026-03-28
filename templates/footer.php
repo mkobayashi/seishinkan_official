@@ -1,4 +1,4 @@
-<!-- Footer Contents -->
+<!-- 共通フッター: 地図用スクリプト → page-top → <footer> -->
     <script>
 $(function(){
     // ggmap.js と Google Maps API を読み込んだページのみ（静的フッターに地図用 div は無い）
