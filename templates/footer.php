@@ -8,7 +8,6 @@ $(function(){
 });
 </script>
 
-<!-- Footer Contents -->
     <div id="page-top">
       <p><a id="move-page-top">
           <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><br />

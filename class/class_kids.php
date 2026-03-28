@@ -60,11 +60,6 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
             </div></a>
       </div>
     </div>
-    <div id="page-top">
-      <p><a id="move-page-top">
-          <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><br />
-          top</a></p>
-    </div>
 
-<!--　contents end footer start -->
+<!--　contents end footer start（#page-top は templates/footer.php に集約） -->
  <?php include( $_SERVER['DOCUMENT_ROOT'] . '/templates/footer.php'); ?>
