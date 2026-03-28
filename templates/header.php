@@ -12,8 +12,13 @@
 <!-- title -->
 <title><?php echo title; ?></title>
 
-<!-- Special CSS -->
-<link rel="stylesheet" href="/css/<?php echo cssinc; ?>.css" type="text/css">
+<!-- Special CSS（?v= はサーバー上の更新時刻でキャッシュ回避） -->
+<?php
+$_seishinkan_css = '/css/' . cssinc . '.css';
+$_seishinkan_css_fs = $_SERVER['DOCUMENT_ROOT'] . $_seishinkan_css;
+$_seishinkan_css_v = is_file($_seishinkan_css_fs) ? filemtime($_seishinkan_css_fs) : 0;
+?>
+<link rel="stylesheet" href="<?php echo htmlspecialchars($_seishinkan_css . '?v=' . (int) $_seishinkan_css_v, ENT_QUOTES, 'UTF-8'); ?>" type="text/css">
 
 <!-- Bootstrap -->
 <link href="/css/bootstrap.min.css" rel="stylesheet">

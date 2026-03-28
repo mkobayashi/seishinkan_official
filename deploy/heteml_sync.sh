@@ -147,4 +147,10 @@ for item in "${INCLUDES[@]}"; do
   fi
 done
 
+# mirror がリモート日付等でスキップする事例があるため、氣圧法ページ用の本体を毎回 put で確実に上書き
+if [[ -f "${ROOT_DIR}/css/seishinkan.css" ]]; then
+  echo "Force-upload css/seishinkan.css"
+  run_lftp_put "${ROOT_DIR}/css/seishinkan.css" "${HETEML_REMOTE_DIR}/css"
+fi
+
 echo "Done."
