@@ -51,7 +51,7 @@ INCLUDES=(
 LFTP_MIRROR_FLAGS=(
   "--reverse"
   "--verbose"
-  "--only-newer"
+  # --only-newer は「リモートの mtime が新しい」と中身が古くてもスキップするため使わない
   "--parallel=4"
   "--no-perms"
   "--no-umask"

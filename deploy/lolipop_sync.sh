@@ -46,7 +46,7 @@ INCLUDES=(
 LFTP_MIRROR_FLAGS=(
   "--reverse"
   "--verbose"
-  "--only-newer"
+  # --only-newer はリモート日時が新しいとローカルより新しい内容でも上書きされないことがある
   "--parallel=4"
   "--no-perms"
   "--no-umask"

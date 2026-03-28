@@ -1,4 +1,4 @@
-/*! seishinkan class pages — if heteml CSS looks old, redeploy (workflow_dispatch) */
+/*! seishinkan class pages — deploy 2026-03: lftp は --only-newer 廃止後に再同期 */
 
 .btn-lg {
     margin-bottom: 40px;
