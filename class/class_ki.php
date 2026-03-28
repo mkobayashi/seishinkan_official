@@ -16,7 +16,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
 
       <div class="row">
         <div class="col-xs-12 local-header-img">
-          <div id="local-header-fade" class="crossfader">
+          <div id="local-header-fade" class="crossfader crossfader--ki-page" data-crossfader-role="ki-page">
             <img src="/class/image/ki/slider_01.jpg" class="img-responsive" alt="氣圧法クラスの稽古風景 1">
             <img src="/class/image/ki/slider_02.jpg" class="img-responsive" alt="氣圧法クラスの稽古風景 2">
           </div>

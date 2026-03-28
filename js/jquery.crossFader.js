@@ -26,7 +26,10 @@
 			clickStep: true,
 			autoStart: true,
 			random: false,
-			loop: true
+			loop: true,
+			// グローバルな .active（Bootstrap ナビ等）と衝突しないよう専用クラス
+			activeClass: 'cf-slide-active',
+			lastActiveClass: 'cf-slide-last'
 		}, options);
 		
 		return this.each(function(){
@@ -71,10 +74,10 @@
 
 			// set first image
 			function slideSet(){
-				$slide.removeClass('active');
+				$slide.removeClass(options.activeClass);
 				// set first image in random order, if random is true
 				var $start = (options.random) ? Math.floor(Math.random() * $slide.length) : 0;
-				$($slide[$start]).addClass('active');
+				$($slide[$start]).addClass(options.activeClass);
 			}
 			
 			// slideSwitch
@@ -83,7 +86,7 @@
 				//prevent from continuous click
 				$slide.unbind('click');
 				
-				var $active = $('img.active', $unit);
+				var $active = $unit.find('img.' + options.activeClass);
 				
 				//for loop
 				if(options.loop || switches < slides || clicked) {
@@ -104,15 +107,15 @@
 					var $next = ($active.next().length) ? $active.next() : $('img:first-child', $unit);
 				}
 				
-				//set z-index lower than "class=active"
-				$active.addClass('last-active');
+				//set z-index lower than visible slide
+				$active.addClass(options.lastActiveClass);
 			
 				//transition
 				$next
 					.css({opacity: 0.0})
-					.addClass('active')
+					.addClass(options.activeClass)
 					.animate({opacity: 1.0}, sp, function(){
-						$active.removeClass('active last-active');
+						$active.removeClass(options.activeClass + ' ' + options.lastActiveClass);
 						$slide.bind('click', slideClick);
 					});
 			}

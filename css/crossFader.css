@@ -22,12 +22,12 @@
 
 }
 
-.crossfader .active{
+.crossfader .cf-slide-active{
 	z-index:10;
 	opacity:1.0;
 }
 
-.crossfader .last-active{
+.crossfader .cf-slide-last{
 	z-index:9;
 }
 
@@ -54,7 +54,7 @@ div#img_fader{
 }
 
 div#img_fader ul li img{
-    width: 100%;
+	width: 100%;
     
 	position:absolute;
 	top:0;
@@ -64,12 +64,12 @@ div#img_fader ul li img{
 	cursor:pointer;
 }
 
-div#img_fader .active{
+div#img_fader .cf-slide-active{
 	z-index:10;
 	opacity:1.0;
 }
 
-div#img_fader .last-active{
+div#img_fader .cf-slide-last{
 	z-index:9;
 }
 
