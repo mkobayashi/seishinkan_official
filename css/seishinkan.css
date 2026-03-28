@@ -36,6 +36,11 @@ th {
     position: relative;
 }
 
+/* crossFader.css の img { cursor:pointer } は誤解を招く（スライダー画像はリンクではない） */
+.local-header-img .crossfader img {
+    cursor: default;
+}
+
 .class-slider-icon {
     position: absolute;
     z-index: 110;
