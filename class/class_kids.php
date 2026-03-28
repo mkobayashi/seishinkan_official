@@ -17,10 +17,11 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
       <div class="row">
         <div class="col-xs-12 local-header-img">
           <div id="local-header-fade" class="crossfader crossfader--kids-page" data-crossfader-role="kids-page">
-          <img src="image/kids/kids_02.jpg" class="img-responsive">
-          <img src="image/kids/kids_03.jpg" class="img-responsive">
-          <img src="image/kids/kids_04.jpg" class="img-responsive">
-          <img src="image/kids/kids_05.jpg" class="img-responsive">
+          <img src="/class/image/kids/kids_01.jpg" class="img-responsive" alt="子どもクラス（整列・座り）の稽古風景" fetchpriority="high" decoding="async">
+          <img src="/class/image/kids/kids_02.jpg" class="img-responsive" alt="子どもクラスの稽古風景">
+          <img src="/class/image/kids/kids_03.jpg" class="img-responsive" alt="子どもクラスの稽古風景">
+          <img src="/class/image/kids/kids_04.jpg" class="img-responsive" alt="子どもクラスの稽古風景">
+          <img src="/class/image/kids/kids_05.jpg" class="img-responsive" alt="子どもクラスの稽古風景">
           </div>        </div>
         <div class="container sta-label-con">
 <div class="local-label ryu-mincho message">

@@ -45,7 +45,14 @@ $(function() {
     var $fadePrimary = $('#local-header-fade');
     if ($fadePrimary.length) {
         sizeLocalCrossfader($fadePrimary);
-        $fadePrimary.crossFader(crossfaderOpts);
+        var primaryOpts = $.extend({}, crossfaderOpts);
+        // 子どもクラス：枚数が多いのでフェードをやや長めに（チラつきを抑える）
+        if ($fadePrimary.hasClass('crossfader--kids-page')) {
+            primaryOpts.speed = 1200;
+            primaryOpts.changeSpd = 1000;
+            primaryOpts.timer = 4500;
+        }
+        $fadePrimary.crossFader(primaryOpts);
     }
 
     // 2台目（同一ページ内の「静」）：即時初期化（遅延は初回表示欠落の原因になり得るため廃止）

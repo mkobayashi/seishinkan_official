@@ -65,16 +65,21 @@
 
 			//fadeStart
 			function fadeStart(){
-					timerID = setInterval(function(){
+					if (slides >= 2) {
+						timerID = setInterval(function(){
 							slideSwitch(options.speed);
 						}, options.timer);
-						$slide.bind('click', slideClick);
 					}
+					$slide.bind('click', slideClick);
+				}
 			}
 
 			// set first image
 			function slideSet(){
 				$slide.removeClass(options.activeClass);
+				if (!slides) {
+					return;
+				}
 				// set first image in random order, if random is true
 				var $start = (options.random) ? Math.floor(Math.random() * $slide.length) : 0;
 				$($slide[$start]).addClass(options.activeClass);
@@ -82,6 +87,9 @@
 			
 			// slideSwitch
 			function slideSwitch(sp){
+				if (slides < 2) {
+					return;
+				}
 				
 				//prevent from continuous click
 				$slide.unbind('click');
@@ -90,7 +98,9 @@
 				
 				//for loop
 				if(options.loop || switches < slides || clicked) {
-					if ($active.length == 0) $active = $('img:last-child', $unit);
+					if ($active.length == 0) {
+						$active = $slide.last();
+					}
 					switches++;
 					clicked = false;
 				} else {
@@ -99,12 +109,16 @@
 					return;
 				}
 				
-				//pull the images in the order they appear in the markup
-				//var $next = ($active.next().length) ? $active.next() : $('img:first-child', $unit);
-				if(links){
-					var $next = ($active.parent("a").next().length) ? $active.parent("a").next().find('img') : $('img:first', $unit);
+				// $slide 順で次へ（先頭・末尾の img が :first-child でない DOM でも確実に動く）
+				var $next;
+				if (links) {
+					$next = ($active.parent("a").next().length) ? $active.parent("a").next().find('img') : $slide.first();
 				} else {
-					var $next = ($active.next().length) ? $active.next() : $('img:first-child', $unit);
+					var cur = $slide.index($active);
+					if (cur < 0) {
+						cur = 0;
+					}
+					$next = $slide.eq((cur + 1) % slides);
 				}
 				
 				//set z-index lower than visible slide

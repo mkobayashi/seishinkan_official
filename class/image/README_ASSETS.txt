@@ -12,6 +12,10 @@
   氣圧法クラスページ class_ki.php … 上部ヒーロースライダー
   slide_01.jpg, slide_02.jpg
 
+■ /class/image/kids/
+  子どもクラスページ class_kids.php … ヒーロースライダー（5枚）
+  kids_01.jpg … kids_05.jpg（01 が先頭・整列して座るカット想定）
+
 ■ /class/image/body_ki/
   氣圧法クラスページ class_ki.php … 本文・クラスの様子
   body_intro.jpg, body_01.jpg … body_04.jpg

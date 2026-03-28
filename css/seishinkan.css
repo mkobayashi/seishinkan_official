@@ -56,46 +56,52 @@ th {
     display: block;
 }
 
-.class-slider-icon {
+/* 合氣道クラス HERO 右上「動／静」：他スタイルに負けないよう .local-header-img まで含めて指定 */
+.local-header-img .class-slider-icon {
     position: absolute;
     z-index: 110;
-    top: 16px;
-    right: 16px;
-    width: 91px;
-    height: 91px;
+    top: 40px;
+    right: 60px;
+    bottom: auto;
+    left: auto;
+    margin: 0;
+    width: 105px;
+    height: 105px;
+    box-sizing: border-box;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(108, 138, 178, 0.42);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    /* グリーン系・薄く透けて下の写真が見える */
+    background-color: rgba(78, 148, 118, 0.28);
+    background-image: none;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.22);
     pointer-events: none;
 }
 
-.class-slider-icon--ki {
-    background: rgba(78, 148, 118, 0.4);
-}
-
-.class-slider-icon__inner {
+.local-header-img .class-slider-icon__inner {
     color: rgba(255, 255, 255, 0.96);
-    font-size: 36px;
+    font-size: 42px;
     line-height: 1;
     letter-spacing: 0.08em;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 767px) {
-    .class-slider-icon {
-        width: 77px;
-        height: 77px;
-        top: 10px;
-        right: 10px;
+    .local-header-img .class-slider-icon {
+        width: 89px;
+        height: 89px;
+        top: 20px;
+        right: 30px;
+        bottom: auto;
+        left: auto;
+        margin: 0;
     }
 
-    .class-slider-icon__inner {
-        font-size: 31px;
+    .local-header-img .class-slider-icon__inner {
+        font-size: 36px;
     }
 }
 

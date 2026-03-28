@@ -62,7 +62,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
             <img src="/class/image/hero_aiki_sei/slide_01.jpg" class="img-responsive" alt="合氣道クラス（静）の稽古風景">
             <img src="/class/image/hero_aiki_sei/slide_02.jpg" class="img-responsive" alt="合氣道クラス（静）の稽古風景">
           </div>
-          <div class="class-slider-icon class-slider-icon--ki ryu-mincho" aria-hidden="true">
+          <div class="class-slider-icon ryu-mincho" aria-hidden="true">
             <div class="class-slider-icon__inner">静</div>
           </div>
         </div>
