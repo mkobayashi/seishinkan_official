@@ -39,8 +39,21 @@ th {
 }
 
 /* crossFader.css の img { cursor:pointer } は誤解を招く（スライダー画像はリンクではない） */
+/* common-theme の .local-header-img img（display:block; margin:auto）が後読みで重なり、
+   absolute 配置が崩れると「真っ白」に見えることがあるため明示する */
+.local-header-img .crossfader {
+    width: 100%;
+}
 .local-header-img .crossfader img {
     cursor: default;
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: block;
 }
 
 .class-slider-icon {

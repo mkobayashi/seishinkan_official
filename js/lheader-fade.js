@@ -48,13 +48,11 @@ $(function() {
         $fadePrimary.crossFader(crossfaderOpts);
     }
 
-    // 2台目（同一ページ内の「静」）：別 setInterval をずらして同時切り替えによる干渉感を減らす
+    // 2台目（同一ページ内の「静」）：即時初期化（遅延は初回表示欠落の原因になり得るため廃止）
     var $fadeKi = $('#local-header-fade-ki');
     if ($fadeKi.length) {
         sizeLocalCrossfader($fadeKi);
-        setTimeout(function() {
-            $fadeKi.crossFader(crossfaderOpts);
-        }, 500);
+        $fadeKi.crossFader(crossfaderOpts);
     }
 });
 
