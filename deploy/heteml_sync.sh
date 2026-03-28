@@ -7,7 +7,8 @@ set -euo pipefail
 # - HETEML_HOST (e.g. ftp-aikidodev.heteml.net)
 # - HETEML_USER (e.g. aikidodev)
 # - HETEML_PASS
-# - HETEML_REMOTE_DIR (e.g. /root/web/seishinkan_official)
+# - HETEML_REMOTE_DIR  heteml 管理画面の「公開フォルダ」と完全一致（例: /web/seishinkan_official）
+#   GitHub Secret も同じ値にすること。/root/web/... は別パスになるため使わない。
 #
 # Optional env:
 # - DRY_RUN=1 (prints commands; no changes)
@@ -22,6 +23,9 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 : "${HETEML_USER:?}"
 : "${HETEML_PASS:?}"
 : "${HETEML_REMOTE_DIR:?}"
+
+# 末尾スラッシュを除去（cd / mirror の相対パス指定を安定させる）
+HETEML_REMOTE_DIR="${HETEML_REMOTE_DIR%/}"
 
 DRY_RUN="${DRY_RUN:-0}"
 HETEML_FTP_MODE="${HETEML_FTP_MODE:-ftps-force}"
@@ -103,44 +107,58 @@ lftp_settings() {
   esac
 }
 
+# 公開フォルダへ cd したうえで、remote 側は相対パス（例: css）のみ指定する
 run_lftp_mirror() {
   local src_path="$1"
-  local dst_path="$2"
-  {
-    lftp_settings
-    echo "open ${OPEN_URL}"
-    echo "mirror ${LFTP_MIRROR_FLAGS[*]} \"${src_path}\" \"${dst_path}\""
-    echo "bye"
-  } | lftp
-}
-
-# mirror はディレクトリ向け。単一ファイルは put（「Not a directory」回避）
-run_lftp_put() {
-  local src_file="$1"
-  local remote_dir="$2"
-  local base
-  base="$(basename "$src_file")"
+  local remote_reldir="$2"
   if [[ "${DRY_RUN}" == "1" ]]; then
-    echo "[dry-run] put \"${src_file}\" -> ${remote_dir}/${base}"
+    echo "[dry-run] cd \"${HETEML_REMOTE_DIR}\" && mirror ... \"${src_path}\" \"${remote_reldir}\""
     return
   fi
   {
     lftp_settings
     echo "open ${OPEN_URL}"
-    echo "cd \"${remote_dir}\""
+    echo "cd \"${HETEML_REMOTE_DIR}\""
+    echo "mirror ${LFTP_MIRROR_FLAGS[*]} \"${src_path}\" \"${remote_reldir}\""
+    echo "bye"
+  } | lftp
+}
+
+# mirror はディレクトリ向け。単一ファイルは put（「Not a directory」回避）
+# remote_subdir が空なら公開フォルダ直下へ、例: css なら cd 公開フォルダ後に cd css
+run_lftp_put() {
+  local src_file="$1"
+  local remote_subdir="${2:-}"
+  local base
+  base="$(basename "$src_file")"
+  if [[ "${DRY_RUN}" == "1" ]]; then
+    if [[ -n "${remote_subdir}" ]]; then
+      echo "[dry-run] cd \"${HETEML_REMOTE_DIR}\" && cd \"${remote_subdir}\" && put \"${src_file}\" -o \"${base}\""
+    else
+      echo "[dry-run] cd \"${HETEML_REMOTE_DIR}\" && put \"${src_file}\" -o \"${base}\""
+    fi
+    return
+  fi
+  {
+    lftp_settings
+    echo "open ${OPEN_URL}"
+    echo "cd \"${HETEML_REMOTE_DIR}\""
+    if [[ -n "${remote_subdir}" ]]; then
+      echo "cd \"${remote_subdir}\""
+    fi
     echo "put \"${src_file}\" -o \"${base}\""
     echo "bye"
   } | lftp
 }
 
-echo "Syncing to heteml (${HETEML_FTP_MODE}): ftp://${HETEML_USER}@${HETEML_HOST}${HETEML_REMOTE_DIR}"
+echo "Syncing to heteml (${HETEML_FTP_MODE}): ftp://${HETEML_USER}@${HETEML_HOST} → cd ${HETEML_REMOTE_DIR}"
 
 for item in "${INCLUDES[@]}"; do
   LOCAL_PATH="${ROOT_DIR}/${item}"
   if [[ -d "${LOCAL_PATH}" ]]; then
-    run_lftp_mirror "${LOCAL_PATH}" "${HETEML_REMOTE_DIR}/${item%/}"
+    run_lftp_mirror "${LOCAL_PATH}" "${item%/}"
   elif [[ -f "${LOCAL_PATH}" ]]; then
-    run_lftp_put "${LOCAL_PATH}" "${HETEML_REMOTE_DIR}"
+    run_lftp_put "${LOCAL_PATH}" ""
   else
     echo "Error: include not found: ${item}" >&2
     exit 1
@@ -150,7 +168,7 @@ done
 # mirror がリモート日付等でスキップする事例があるため、氣圧法ページ用の本体を毎回 put で確実に上書き
 if [[ -f "${ROOT_DIR}/css/seishinkan.css" ]]; then
   echo "Force-upload css/seishinkan.css"
-  run_lftp_put "${ROOT_DIR}/css/seishinkan.css" "${HETEML_REMOTE_DIR}/css"
+  run_lftp_put "${ROOT_DIR}/css/seishinkan.css" "css"
 fi
 
 echo "Done."

@@ -37,6 +37,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y lftp
 
+      # Secret HETEML_REMOTE_DIR は heteml 管理画面の「公開フォルダ」と同じ値（例: /web/seishinkan_official）
       - name: Deploy (FTP/FTPS mirror)
         env:
           HETEML_HOST: ${{ secrets.HETEML_HOST }}

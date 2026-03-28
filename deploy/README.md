@@ -18,7 +18,7 @@ cd /Users/kobayashimasahiro/Desktop/seishinkan_official
 export HETEML_HOST="ftp-aikidodev.heteml.net"
 export HETEML_USER="aikidodev"
 export HETEML_PASS="(SFTPのパスワード)"
-export HETEML_REMOTE_DIR="/root/web/seishinkan_official"
+export HETEML_REMOTE_DIR="/web/seishinkan_official"
 
 bash deploy/heteml_sync.sh
 ```
