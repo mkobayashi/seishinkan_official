@@ -44,13 +44,9 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     <!-- Special JS -->
-    <!-- Crossfader -->
+    <!-- Crossfader（bsn.Crossfader の img1〜4 デモは削除。スライダーは jQuery プラグインのみ） -->
     <script src="/js/jquery.crossFader.js"></script>
-    <script src="/js/bsn.Crossfader.js"></script>
     <script src="/js/lheader-fade.js"></script>
-    <script>
-    var img = new Crossfader( new Array('img1', 'img2', 'img3', 'img4'), 1000, 4000 );
-    </script>
 	  <!-- GA -->
 	  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6R1XL99XF"></script>

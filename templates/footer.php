@@ -1,8 +1,10 @@
 <!-- Footer Contents -->
     <script>
 $(function(){
-    drawGMap("東京都世田谷区成城5-9-3", 'div.ggmap.mapdisplay');
-
+    // ggmap.js と Google Maps API を読み込んだページのみ（静的フッターに地図用 div は無い）
+    if (typeof drawGMap === 'function' && $('div.ggmap.mapdisplay').length) {
+        drawGMap("東京都世田谷区成城5-9-3", 'div.ggmap.mapdisplay');
+    }
 });
 </script>
 

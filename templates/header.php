@@ -47,14 +47,9 @@ $_seishinkan_css_v = is_file($_seishinkan_css_fs) ? filemtime($_seishinkan_css_f
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     <!-- Special JS -->
-<!-- Crossfader -->
+<!-- Crossfader（スライダーは jQuery crossFader + lheader-fade.js。古い bsn.Crossfader + img1〜4 のデモは削除） -->
 <script src="/js/jquery.crossFader.js"></script>
-<script src="/js/bsn.Crossfader.js"></script>
 <script src="/js/lheader-fade.js"></script>
-<script>
-    var img = new Crossfader( new Array('img1', 'img2', 'img3', 'img4'), 1000, 4000 );
-    
-</script>
 <?php if (function_exists('wp_head')) { wp_head(); } ?>
   </head>
   
