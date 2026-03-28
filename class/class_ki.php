@@ -17,8 +17,8 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
       <div class="row">
         <div class="col-xs-12 local-header-img">
           <div id="local-header-fade" class="crossfader crossfader--ki-page" data-crossfader-role="ki-page">
-            <img src="/class/image/ki/slider_01.jpg" class="img-responsive" alt="氣圧法クラスの稽古風景 1">
-            <img src="/class/image/ki/slider_02.jpg" class="img-responsive" alt="氣圧法クラスの稽古風景 2">
+            <img src="/class/image/hero_ki/slide_01.jpg" class="img-responsive" alt="氣圧法クラスの稽古風景 1">
+            <img src="/class/image/hero_ki/slide_02.jpg" class="img-responsive" alt="氣圧法クラスの稽古風景 2">
           </div>
         </div>
         <div class="container sta-label-con">
@@ -73,7 +73,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
-          <img src="/class/image/ki/body_intro.jpg" class="img-responsive ki-intro-photo" alt="氣圧法のトレーニング風景">
+          <img src="/class/image/body_ki/body_intro.jpg" class="img-responsive ki-intro-photo" alt="氣圧法のトレーニング風景">
         </div>
       </div>
 
@@ -81,7 +81,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
 
       <div class="row ki-block ki-block--vcenter">
         <div class="col-xs-12 col-sm-6 ki-block-media">
-          <img src="/class/image/ki/body_01.jpg" class="img-responsive ki-photo" alt="ウォーミングアップの様子">
+          <img src="/class/image/body_ki/body_01.jpg" class="img-responsive ki-photo" alt="ウォーミングアップの様子">
         </div>
         <div class="col-xs-12 col-sm-6 ki-block-text">
           <h4 class="text-primary kozuka-mincho">ウォーミングアップ</h4>
@@ -94,7 +94,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
 
       <div class="row ki-block ki-block--vcenter ki-block--reverse">
         <div class="col-xs-12 col-sm-6 ki-block-media">
-          <img src="/class/image/ki/body_02.jpg" class="img-responsive ki-photo" alt="自然な姿勢の確認">
+          <img src="/class/image/body_ki/body_02.jpg" class="img-responsive ki-photo" alt="自然な姿勢の確認">
         </div>
         <div class="col-xs-12 col-sm-6 ki-block-text">
           <h4 class="text-primary kozuka-mincho">自然な姿勢</h4>
@@ -108,7 +108,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
 
       <div class="row ki-block ki-block--vcenter">
         <div class="col-xs-12 col-sm-6 ki-block-media">
-          <img src="/class/image/ki/body_03.jpg" class="img-responsive ki-photo" alt="心の静めかたの稽古">
+          <img src="/class/image/body_ki/body_03.jpg" class="img-responsive ki-photo" alt="心の静めかたの稽古">
         </div>
         <div class="col-xs-12 col-sm-6 ki-block-text">
           <h4 class="text-primary kozuka-mincho">心の静めかた</h4>
@@ -121,7 +121,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
 
       <div class="row ki-block ki-block--vcenter ki-block--reverse">
         <div class="col-xs-12 col-sm-6 ki-block-media">
-          <img src="/class/image/ki/body_04.jpg" class="img-responsive ki-photo" alt="氣圧法の実践">
+          <img src="/class/image/body_ki/body_04.jpg" class="img-responsive ki-photo" alt="氣圧法の実践">
         </div>
         <div class="col-xs-12 col-sm-6 ki-block-text">
           <h4 class="text-primary kozuka-mincho">氣圧法</h4>

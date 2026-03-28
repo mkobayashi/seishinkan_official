@@ -16,9 +16,9 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
       <div class="row">
         <div class="col-xs-12 local-header-img">
           <div id="local-header-fade" class="crossfader crossfader--class-aiki-dou" data-crossfader-role="aiki-dou">
-          <img src="/class/image/cl/class_01.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
-          <img src="/class/image/cl/class_02.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
-          <img src="/class/image/cl/class_03.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
+          <img src="/class/image/hero_aiki_dou/slide_01.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
+          <img src="/class/image/hero_aiki_dou/slide_02.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
+          <img src="/class/image/hero_aiki_dou/slide_03.jpg" class="img-responsive" alt="合氣道クラス（動）の稽古風景">
           </div>
           <div class="class-slider-icon ryu-mincho" aria-hidden="true">
             <div class="class-slider-icon__inner">動</div>
@@ -54,13 +54,13 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
       </div>
     </div>
 
-<!-- 氣のクラス：静スライダー（class/image/ki/ の slider_* ＝ class_ki 上部と同一・FTP） -->
+<!-- 静スライダー … /class/image/hero_aiki_sei/（README_ASSETS.txt 参照） -->
     <div class="container-fluid local-header">
       <div class="row">
         <div class="col-xs-12 local-header-img">
           <div id="local-header-fade-ki" class="crossfader crossfader--class-aiki-sei" data-crossfader-role="aiki-sei">
-            <img src="/class/image/ki/slider_01.jpg" class="img-responsive" alt="氣圧法クラス（静）の稽古風景">
-            <img src="/class/image/ki/slider_02.jpg" class="img-responsive" alt="氣圧法クラス（静）の稽古風景">
+            <img src="/class/image/hero_aiki_sei/slide_01.jpg" class="img-responsive" alt="合氣道クラス（静）の稽古風景">
+            <img src="/class/image/hero_aiki_sei/slide_02.jpg" class="img-responsive" alt="合氣道クラス（静）の稽古風景">
           </div>
           <div class="class-slider-icon class-slider-icon--ki ryu-mincho" aria-hidden="true">
             <div class="class-slider-icon__inner">静</div>
