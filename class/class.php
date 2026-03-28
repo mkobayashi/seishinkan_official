@@ -54,13 +54,13 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
       </div>
     </div>
 
-<!-- 氣のクラス：スライダー（動を学ぶの直下／class_ki と同じ画像） -->
+<!-- 氣のクラス：スライダー（動を学ぶの直下／class_ki と同一ファイル class/image/ki/） -->
     <div class="container-fluid local-header">
       <div class="row">
         <div class="col-xs-12 local-header-img">
           <div id="local-header-fade-ki" class="crossfader">
-            <img src="/image/cl/ki.jpg" class="img-responsive" alt="氣圧法クラス（静）の稽古風景">
-            <img src="/image/cl/ki_02.jpg" class="img-responsive" alt="氣圧法クラス（静）の稽古風景">
+            <img src="/class/image/ki/slider_01.jpg" class="img-responsive" alt="氣圧法クラス（静）の稽古風景">
+            <img src="/class/image/ki/slider_02.jpg" class="img-responsive" alt="氣圧法クラス（静）の稽古風景">
           </div>
           <div class="class-slider-icon class-slider-icon--ki ryu-mincho" aria-hidden="true">
             <div class="class-slider-icon__inner">静</div>
