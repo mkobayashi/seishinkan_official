@@ -44,6 +44,11 @@ th {
 .local-header-img .crossfader {
     width: 100%;
 }
+
+/* 合氣道「静」：JS 適用前も高さが 0 にならない（下段スライダーが真っ白に見えるのを防ぐ） */
+.local-header-img .crossfader.crossfader--class-aiki-sei {
+    min-height: min(50vw, 600px);
+}
 .local-header-img .crossfader img {
     cursor: default;
     position: absolute !important;

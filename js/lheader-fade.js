@@ -1,26 +1,5 @@
 /*** クラス紹介など：ローカルヘッダー crossfader（#local-header-fade と #local-header-fade-ki は別インスタンス・別タイマー） ***/
 $(function() {
-    var w = $(window).width();
-    var h = Math.min(w * 600 / 1200, 600);
-    var cf_css = {};
-    if (w >= 1200) {
-        cf_css = {
-            height: h,
-            maxWidth: '100%'
-        };
-    } else if (w >= 768) {
-        cf_css = {
-            height: h,
-            width: '100%'
-        };
-    } else {
-        h = (w + 30) * 600 / 1200;
-        cf_css = {
-            height: h,
-            width: '100%'
-        };
-    }
-
     var crossfaderOpts = {
         timer: 4000,
         speed: 1000,
@@ -29,14 +8,33 @@ $(function() {
         loop: true
     };
 
-    function sizeLocalCrossfader($fade) {
+    /** 表示幅は都度取得（DOMContentLoaded 時と load 時でレイアウトが変わる環境向け） */
+    function applyLocalCrossfaderSize($fade) {
         if (!$fade.length) {
             return;
         }
+        var w = $(window).width();
+        var h = Math.min(w * 600 / 1200, 600);
+        var cf_css;
         if (w >= 1200) {
+            cf_css = {
+                height: h,
+                maxWidth: '100%'
+            };
             $fade.find('img').css({
                 maxWidth: '100%'
             });
+        } else if (w >= 768) {
+            cf_css = {
+                height: h,
+                width: '100%'
+            };
+        } else {
+            h = (w + 30) * 600 / 1200;
+            cf_css = {
+                height: h,
+                width: '100%'
+            };
         }
         $fade.css(cf_css);
     }
@@ -44,7 +42,7 @@ $(function() {
     // 1台目（合氣道「動」・子ども・氣圧法ページの単一スライダーなど）：即時初期化
     var $fadePrimary = $('#local-header-fade');
     if ($fadePrimary.length) {
-        sizeLocalCrossfader($fadePrimary);
+        applyLocalCrossfaderSize($fadePrimary);
         var primaryOpts = $.extend({}, crossfaderOpts);
         // 子どもクラス：枚数が多いのでフェードをやや長めに（チラつきを抑える）
         if ($fadePrimary.hasClass('crossfader--kids-page')) {
@@ -55,11 +53,18 @@ $(function() {
         $fadePrimary.crossFader(primaryOpts);
     }
 
-    // 2台目（同一ページ内の「静」）：即時初期化（遅延は初回表示欠落の原因になり得るため廃止）
+    // 2台目（同一ページ内の「静」）：画像・レイアウト確定後に初期化（ステージングで下段だけ欠ける対策）
     var $fadeKi = $('#local-header-fade-ki');
     if ($fadeKi.length) {
-        sizeLocalCrossfader($fadeKi);
-        $fadeKi.crossFader(crossfaderOpts);
+        function initKiCrossfader() {
+            applyLocalCrossfaderSize($fadeKi);
+            $fadeKi.crossFader(crossfaderOpts);
+        }
+        if (document.readyState === 'complete') {
+            initKiCrossfader();
+        } else {
+            $(window).on('load', initKiCrossfader);
+        }
     }
 });
 
