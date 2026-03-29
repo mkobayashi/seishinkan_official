@@ -347,6 +347,69 @@ th {
     }
 }
 
+/* 氣圧法クラス：費用テーブル（class_ki.php） */
+table.ki-fee-table {
+    border-bottom: 1px solid #ddd;
+}
+
+table.ki-fee-table > tbody > tr > td {
+    line-height: 2.1;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+table.ki-fee-table > tbody > tr > td p {
+    line-height: 2.1;
+}
+
+.ki-fee-schedule-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 3em;
+    row-gap: 0.35em;
+    padding-left: 18px;
+}
+
+.ki-fee-schedule-title {
+    margin: 0;
+}
+
+.ki-fee-schedule-times {
+    margin: 0;
+    flex: 1;
+    min-width: 12rem;
+    line-height: 2.1;
+}
+
+table.ki-fee-table > tbody > tr > td.ki-fee-schedule-cell {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+table.ki-fee-table > tbody > tr:first-child > td.ki-fee-schedule-cell {
+    padding-top: 22px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .ki-fee-schedule-row {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 2em;
+        column-gap: 0;
+    }
+
+    .ki-fee-schedule-times {
+        min-width: 0;
+    }
+
+    table.ki-fee-table > tbody > tr > td.ki-fee-list-cell {
+        padding-left: 26px;
+    }
+}
+
 .class-main {
     margin-top: 40px;
     margin-bottom: 50px;
@@ -850,7 +913,7 @@ div#qandaimg img{
     font-size: 20px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {G
     .beginner-top-label {
         bottom: 12%;
         right:4%;

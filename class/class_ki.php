@@ -142,6 +142,48 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
         </div>
       </div>
     </div>
+
+    <hr class="sta-space-sm">
+
+    <div class="container">
+      <div>
+       <table class="table ki-fee-table">
+         <tbody>
+          <tr>
+            <td rowspan="2" class="col-xs-4 text-info top"><h4 class="h4-16"><strong>稽古日時</strong></h4>（毎月の「スケジュール表」をご覧ください。）</td>
+            <td class="col-xs-8 top ki-fee-schedule-cell">
+              <div class="ki-fee-schedule-row">
+                <h4 class="h4-16 ki-fee-schedule-title"><strong>成城道場</strong></h4>
+                <p class="ki-fee-schedule-times">月曜日09:30-10:50（月3回）と金曜日19:00-20:30（月3回）</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="col-xs-8 ki-fee-schedule-cell">
+              <div class="ki-fee-schedule-row">
+                <h4 class="h4-16 ki-fee-schedule-title"><strong>赤坂教室</strong></h4>
+                <p class="ki-fee-schedule-times">月曜日19:00-20:30（月3回）と土曜日10:30-12:00（月1回）</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="col-xs-4 text-info top"><span class="h4-16"><strong>月会費</strong></span>：月に何時間出席しても月会費金額は一律です。</td>
+            <td class="col-xs-8 top ki-fee-list-cell">・大人／学生とも9,900円（税込）<br>
+              ・合氣道クラスに出席している方は、現在の月会費＋2,200円（計 学生12,100円／大人13,200円）<br>
+              （氣のクラス所属で、合氣道クラスにも出席希望の方は＋3,300円（計13,200円））<br>
+              ・土曜日のみに参加の方は自動引き落としの金額変更はしません（つど現金払で）</td>
+          </tr>
+          <tr>
+            <td class="col-xs-4 text-info bottom"><span class="h4-16"><strong>その他</strong></span>：</td>
+            <td class="col-xs-8 bottom ki-fee-list-cell">・服装はトレーニングウェアなどで<br>
+              ・高校生以下は参加できません。<br>
+              ・「氣圧法クラス」は本部のプログラムです。指導は小原館長と育成プログラムを受講した指導員です。</td>
+          </tr>
+      </tbody>
+    </table>
+</div>
+</div>
+
 <!-- 見学・無料体験 CTA（#page-top 以降は templates/footer.php） -->
     <div class="container">
       <div class="row btnlink2">
