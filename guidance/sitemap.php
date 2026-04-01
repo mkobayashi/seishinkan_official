@@ -59,7 +59,7 @@
                 <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
                   <a href="/class/class_kids.php">子どもクラス</a></li>
                 <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                  <a href="/class/class_ki.php">氣のクラス</a></li>
+                  <a href="/class/class_ki.php">氣のクラス（氣圧法クラス）</a></li>
                 <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
                   <a href="/class/class_kinokouza.php">氣の講座</a></li>
                 <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
