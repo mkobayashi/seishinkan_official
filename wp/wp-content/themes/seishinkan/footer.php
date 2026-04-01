@@ -44,7 +44,7 @@ $(function(){
               <h5>月会費・入会時費用</h5>
               <ul class="list-unstyled">
                 <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                  <a href="/entry/entry.php#price">月会費・入会時費用</a></li>
+                  <a href="/entry/entry.php">月会費・入会時費用</a></li>
               </ul>
             </div>
 

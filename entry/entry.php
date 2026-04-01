@@ -10,8 +10,8 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
     
     <div class="container-fluid local-header">
       <div class="row">
-        <div class="col-xs-12 local-header-title text-center">
-          <h2 class="h2-28 ryu-mincho">月会費・入会時費用</h2>
+        <div class="col-xs-12 local-header-title line-2 text-center">
+          <h2 class="h2-28 ryu-mincho">月会費・入会時費用<br><small>（合氣道クラス・子どもクラス）</small></h2>
         </div>
       </div>
 

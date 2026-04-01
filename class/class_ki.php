@@ -1,7 +1,7 @@
 <?php 
 define("cssinc" ,"seishinkan");
-define("description","氣圧法クラスの紹介です。初心者の方でも安心して取り組める稽古内容です。");
-define("title","氣圧法クラス | クラス紹介｜心身統一合氣道会 成心館道場");
+define("description","氣のクラス（氣圧法クラス）の紹介です。初心者の方でも安心して取り組める稽古内容です。");
+define("title","氣のクラス（氣圧法クラス） | クラス紹介｜心身統一合氣道会 成心館道場");
 include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
 
 <!--　header end contents start -->
@@ -10,7 +10,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
     <div class="container-fluid local-header">
       <div class="row">
         <div class="col-xs-12 local-header-title text-center">
-          <h2 class="h2-28 ryu-mincho">氣圧法クラス</h2>
+          <h2 class="h2-28 ryu-mincho">氣のクラス（氣圧法クラス）</h2>
         </div>
       </div>
 
@@ -23,7 +23,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
         </div>
         <div class="container sta-label-con">
           <div class="local-label ryu-mincho message message-ki">
-            <h3 class="h3-22">合気道の知恵で、<br>心と身体、もっと楽に</h3>
+            <h3 class="h3-22">心身統一合氣道の知恵で、<br>心と身体、もっと楽に</h3>
           </div>
         </div>
 
@@ -43,19 +43,19 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
           <p class="ki-appeal-lead">年齢と共に疲れが取れないと感じる。<br>
             姿勢が気になる。<br>
             呼吸が浅いのをなんとかしたい。</p>
-          <p class="ki-appeal-lead">さまざまな思いで、氣圧法クラスの稽古をはじめた方々が、</p>
+          <p class="ki-appeal-lead">さまざまな思いで、氣のクラスの稽古をはじめた方々が、</p>
           <p class="ki-appeal-lead">「深い呼吸でリラックスできるようになった。」<br>
             「姿勢が整い自信がついた。」<br>
             「身体の動きが軽くなった。」</p>
           <p class="ki-appeal-lead">そんな実感を語ってくれます。</p>
-          <p>氣圧法クラスは、合気道から生まれた誰でも親しめる健康法です。</p>
+          <p>氣のクラスは、心身統一合氣道に基づく誰でも親しめるクラスです。</p>
 
         </div>
         <div class="col-xs-12 col-sm-5">
           <div class="bg-info">
             <div class="motto">
               <h3 class="text-primary h3-22 kozuka-mincho">稽古の内容</h3>
-              <p class="left">・自然な姿勢<br>・氣の体操法〜全身のリラックスを得る体操法（柔軟体操・ワンネスリズムエクササイズ）<br>・氣の意志法〜心の安らぎを得るメディテーション<br>・氣の呼吸法〜心身の健康増進が期待できる全身呼吸法<br>・氣圧法〜健康状態の改善につながることをめざすデイリーケア（治療法ではありません）</p>
+              <p class="left">・自然な姿勢<br>・氣の体操法〜全身のリラックスを得る体操法<br>・氣の意志法〜心の安らぎを得るメディテーション<br>・氣の呼吸法〜心身の健康増進が期待できる全身呼吸法<br>・氣圧法〜健康状態の改善につながることをめざすデイリーケア（治療法ではありません）</p>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
         <div class="col-xs-6 col-sm-8">
           <div class="ki-intro-lead">
             <h3 class="text-primary kozuka-mincho ki-intro-heading">クラスの様子をご紹介します</h3>
-            <p class="ki-intro-text">氣圧法クラスは投げ飛ばしたり、痛い技をかけ合ったりすることはなく、合気道の知恵で、心と身体をもっと楽にするプログラムです。</p>
+            <p class="ki-intro-text">氣のクラスは投げたり、転がったりはしませんが、心身統一合氣道に基づき心と身体をもっと楽にするプログラムです。</p>
           </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -85,7 +85,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
         </div>
         <div class="col-xs-12 col-sm-6 ki-block-text">
           <h4 class="text-primary kozuka-mincho">ウォーミングアップ</h4>
-          <p>柔軟体操や、ワンネスリズムエクササイズというシンプルな動きを通じて、身体の声を聴きながら、ウォーミングアップします。</p>
+          <p>柔軟体操など、いくつかのエクササイズを通じて、ウォーミングアップをします。</p>
           <p>こわばりがときほぐされ、余分な力がとれていきます。</p>
         </div>
       </div>
@@ -98,8 +98,8 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
         </div>
         <div class="col-xs-12 col-sm-6 ki-block-text">
           <h4 class="text-primary kozuka-mincho">自然な姿勢</h4>
-          <p>余分な力みがはいった箇所がないかチェックしながら、全身がリラックスした状態を確認します。</p>
-          <p>「臍下の一点」＝おへその下あたり、を意識して心を落ち着かせるのがコツです。</p>
+          <p>余分な力みがないかチェックしながら、心身ともにリラックスした状態を確認します。</p>
+          <p>自然な姿勢には、自然なバランスがあります。これでバランスがとれた動きが取れるようになります。</p>
           <p>何度も繰り返し、ご一緒に稽古する人と互いにチェックしているうちに、できるようになります。</p>
         </div>
       </div>
@@ -112,8 +112,8 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
         </div>
         <div class="col-xs-12 col-sm-6 ki-block-text">
           <h4 class="text-primary kozuka-mincho">心の静めかた</h4>
-          <p>正座して無理なくゆっくりと息を吐き出すことを、繰り返すうちに、心が静まってきます。</p>
-          <p>体内に酸素が行きわたるので、健康面にもよい稽古です。</p>
+          <p>リラックスして坐り、無理なく静かに呼吸をすることで、心が静まっていきます。</p>
+          <p>体内に新鮮な空気が行きわたると、健康面にも良い稽古です。</p>
         </div>
       </div>
 
@@ -125,8 +125,8 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
         </div>
         <div class="col-xs-12 col-sm-6 ki-block-text">
           <h4 class="text-primary kozuka-mincho">氣圧法</h4>
-          <p>昔から「手当」という言葉があるように手でやさしく触れることで感じられるリラックス効果が見直されています。</p>
-          <p>氣圧法クラスでは「氣圧法」という心身統一合気道会で確立した手法を稽古で学んでいきます。</p>
+          <p>「手当」という言葉があるように、手で触れることのリラックス効果が見直されています。</p>
+          <p>氣のクラスでは「氣圧法」という心身統一合氣道に基づく手法で、全身のリラックスを深めます。</p>
         </div>
       </div>
 
@@ -136,8 +136,8 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
         <div class="col-xs-12">
           <div class="ki-summary-box">
             <h4 class="text-primary kozuka-mincho">日常生活への応用</h4>
-            <p>自然な姿勢、呼吸、臍下の一点を確認し、無理な力がとれていくと、ストレッチやさまざまな日常の動作が軽やかにスッキリとしていきます。</p>
-            <p>ご自身の中に眠っていた感覚と能力を氣圧法クラスでぜひ実感してください。</p>
+            <p>自然な姿勢、呼吸、心の静めかたを体得し、力みがとれていくと、心身ともにスッキリとしていくことでしょう。</p>
+            <p>氣のクラスでぜひ実感してください。</p>
           </div>
         </div>
       </div>
@@ -154,7 +154,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
             <td class="col-xs-8 top ki-fee-schedule-cell">
               <div class="ki-fee-schedule-row">
                 <h4 class="h4-16 ki-fee-schedule-title"><strong>成城道場</strong></h4>
-                <p class="ki-fee-schedule-times">月曜日09:30-10:50（月3回）と金曜日19:00-20:30（月3回）</p>
+                <p class="ki-fee-schedule-times">月曜　09:30〜10:50（月3回）<br>金曜　19:00〜20:30（月3回）</p>
               </div>
             </td>
           </tr>
@@ -162,7 +162,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
             <td class="col-xs-8 ki-fee-schedule-cell">
               <div class="ki-fee-schedule-row">
                 <h4 class="h4-16 ki-fee-schedule-title"><strong>赤坂教室</strong></h4>
-                <p class="ki-fee-schedule-times">月曜日19:00-20:30（月3回）と土曜日10:30-12:00（月1回）</p>
+                <p class="ki-fee-schedule-times">月曜　19:00〜20:30（月3回）<br>土曜　10:30〜12:00（月1回）</p>
               </div>
             </td>
           </tr>
@@ -170,14 +170,18 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
             <td class="col-xs-4 text-info top"><span class="h4-16"><strong>月会費</strong></span>：月に何時間出席しても月会費金額は一律です。</td>
             <td class="col-xs-8 top ki-fee-list-cell">・大人／学生とも9,900円（税込）<br>
               ・合氣道クラスに出席している方は、現在の月会費＋2,200円（計 学生12,100円／大人13,200円）<br>
-              （氣のクラス所属で、合氣道クラスにも出席希望の方は＋3,300円（計13,200円））<br>
-              ・土曜日のみに参加の方は自動引き落としの金額変更はしません（つど現金払で）</td>
+              ・氣のクラスのみで、合氣道クラスにも出席希望の方は学生＋2,200円／大人＋3,300円（計 学生12,100円／大人13,200円）</td>
+          </tr>
+          <tr>
+            <td class="col-xs-4 text-info bottom"><span class="h4-16"><strong>入会時費用</strong></span></td>
+            <td class="col-xs-8 bottom ki-fee-list-cell">入会金 5,500円　テキスト2冊付<br>
+              スポーツ安全保険掛金（毎年4/1～3/31） 大人64歳まで：2,000円／年、65歳以上：1,200円／年<br>
+              年会費（毎年4/1～3/31） 大人：4,400円／年</td>
           </tr>
           <tr>
             <td class="col-xs-4 text-info bottom"><span class="h4-16"><strong>その他</strong></span>：</td>
             <td class="col-xs-8 bottom ki-fee-list-cell">・服装はトレーニングウェアなどで<br>
-              ・高校生以下は参加できません。<br>
-              ・「氣圧法クラス」は本部のプログラムです。指導は小原館長と育成プログラムを受講した指導員です。</td>
+              ・高校生以下は参加できません。</td>
           </tr>
       </tbody>
     </table>
