@@ -81,7 +81,7 @@ $_seishinkan_css_v = is_file($_seishinkan_css_fs) ? filemtime($_seishinkan_css_f
                   <ul class="dropdown-menu">
                     <li><a href="/class/class.php">合氣道クラス</a></li>
                     <li><a href="/class/class_kids.php">子どもクラス</a></li>
-                    <li><a href="/class/class_ki.php">氣のクラス（氣圧法クラス）</a></li>
+                    <li><a href="/class/class_ki.php">氣のクラス</a></li>
                   </ul>
                 </li>
                 <li class="dropdown">

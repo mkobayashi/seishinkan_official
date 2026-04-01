@@ -34,7 +34,7 @@ $(function(){
                 <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
                   <a href="/class/class.php">合氣道クラス</a></li>
                 <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                  <a href="/class/class_ki.php">氣のクラス（氣圧法クラス）</a></li>
+                  <a href="/class/class_ki.php">氣のクラス</a></li>
                                   <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
                   <a href="/class/class_kids.php">子どもクラス</a></li>
               </ul>
