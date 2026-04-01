@@ -35,9 +35,9 @@ $(function(){
                 <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
                   <a href="/class/class.php">合氣道クラス</a></li>
                 <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                  <a href="/class/class_ki.php">氣のクラス</a></li>
-                                  <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
                   <a href="/class/class_kids.php">子どもクラス</a></li>
+                <li><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                  <a href="/class/class_ki.php">氣のクラス</a></li>
               </ul>
             </div>
 
@@ -90,7 +90,7 @@ src="https://www.youtube.com/embed/TbpA2txMYOE?controls=0"
                 <li>青山教室</li>
                 <li>赤坂教室</li>
                 <li>お茶の水教室</li>
-                <li>札幌西28丁目教室</li>
+                <li>札幌大通教室</li>
                 <li>札幌大谷地教室</li>
               </ul>
             </div>
