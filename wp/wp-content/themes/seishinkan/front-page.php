@@ -50,8 +50,6 @@ $the_query = new WP_Query( $args );
     <!-- Local Contents -->
     <hr class="sta-space-xs">
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<?php echo $post->post_content; ?>
-<?php endwhile; ?>
+<?php get_template_part( 'template-parts/home', 'main' ); ?>
 
 <?php get_footer(); ?>

@@ -30,31 +30,7 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
     </div>
 <!-- Local Contents -->
     <hr class="sta-space-sm">
-<!-- article -->
-<div class="container">
-      <div class="row sta-img-description">
-        <div class="col-xs-12 col-sm-7">
-          <h3 class="text-primary kozuka-mincho">動を学ぶ。</h3>
-          <p>心身統一合氣道は「人間が本来持っている能力を最大限に発揮すること」、「相手の心を尊重して導くこと」を学ぶ武道です。<br> 
-心身統一合氣道の技の稽古を通じて、日常万般に活かせる心身のセルフマネジメント、相手との関わりかた、大事な場面で力を発揮する方法などが身につくことでしょう。<br>
-また、心身統一合氣道の技は、全て無理のない動きですので、初心の方や女性や年配の方も安心して始めることができます。礼の仕方、受身のとり方からご指導します。
-          </p>
-        </div>
-        <div class="col-xs-12 col-sm-5">
-          <div class="bg-info">
-            <div class="motto">
-              <h3 class="text-primary h3-22 kozuka-mincho">心身統一合氣道の五原則</h3>
-              <p class="left">1、氣が出ている<br>2、相手の心を知る<br>3、相手の氣を尊ぶ<br>4、相手の立場に立つ<br>5、率先窮行</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr class="sta-space-sm">
-
-    <!-- article -->
-
+<!-- article（静→動の順） -->
 <div class="container">
       <div class="row sta-img-description">
         <div class="col-xs-12 col-sm-7">
@@ -74,6 +50,30 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
             <div class="motto">
               <h3 class="text-primary h3-22 kozuka-mincho">心身統一の四大原則</h3>
               <p class="left">1、臍下の一点に心をしずめ統一する<br>2、全身の力を完全に抜く<br>3、身体の総ての部分の重みをその最下部におく<br>4、氣を出す</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="sta-space-sm">
+
+    <!-- article -->
+
+<div class="container">
+      <div class="row sta-img-description">
+        <div class="col-xs-12 col-sm-7">
+          <h3 class="text-primary kozuka-mincho">動を学ぶ。</h3>
+          <p>心身統一合氣道は「人間が本来持っている能力を最大限に発揮すること」、「相手の心を尊重して導くこと」を学ぶ武道です。<br> 
+心身統一合氣道の技の稽古を通じて、日常万般に活かせる心身のセルフマネジメント、相手との関わりかた、大事な場面で力を発揮する方法などが身につくことでしょう。<br>
+また、心身統一合氣道の技は、全て無理のない動きですので、初心の方や女性や年配の方も安心して始めることができます。礼の仕方、受身のとり方からご指導します。
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5">
+          <div class="bg-info">
+            <div class="motto">
+              <h3 class="text-primary h3-22 kozuka-mincho">心身統一合氣道の五原則</h3>
+              <p class="left">1、氣が出ている<br>2、相手の心を知る<br>3、相手の氣を尊ぶ<br>4、相手の立場に立つ<br>5、率先窮行</p>
             </div>
           </div>
         </div>
