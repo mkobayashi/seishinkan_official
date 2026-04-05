@@ -14,8 +14,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y lftp
 
-      - name: Deploy (SFTP mirror)
+      # 既定は FTPS（ftp.lolipop.jp）。SSH/SFTP 契約がある場合は Repository variables 等で
+      # LOLIPOP_TRANSFER_MODE=sftp とし、ホストを ssh.lolipop.jp に変更してください。
+      - name: Deploy (lftp mirror)
         env:
+          LOLIPOP_TRANSFER_MODE: ftps
           LOLIPOP_HOST: ${{ secrets.LOLIPOP_HOST }}
           LOLIPOP_USER: ${{ secrets.LOLIPOP_USER }}
           LOLIPOP_PASS: ${{ secrets.LOLIPOP_PASS }}
