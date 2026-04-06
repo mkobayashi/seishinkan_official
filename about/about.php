@@ -2,7 +2,7 @@
 define("cssinc" ,"seishinkan");
 define("description","心身統一合氣道会 成心館道場の概要・沿革をご紹介します。");
 define("title","概要・沿革｜成心館のご紹介｜心身統一合氣道会");
-include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
+require_once dirname( __DIR__ ) . '/templates/header.php'; ?>
 
 <!--　header end contents start -->
     
@@ -188,5 +188,5 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
           top</a></p>
     </div>
 <!--　contents end footer start -->
- <?php include( $_SERVER['DOCUMENT_ROOT'] . '/templates/footer.php'); ?>
+ <?php require_once dirname( __DIR__ ) . '/templates/footer.php'; ?>
    

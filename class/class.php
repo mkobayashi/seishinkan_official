@@ -2,7 +2,7 @@
 define("cssinc" ,"seishinkan");
 define("description","合氣道クラスの紹介です。初心者の方でも安心な稽古内容です。");
 define("title","合氣道クラス｜クラス紹介｜心身統一合氣道会 成心館道場");
-include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
+require_once dirname( __DIR__ ) . '/templates/header.php'; ?>
 
 <!--　header end contents start --> 
     <!-- Local header -->
@@ -91,4 +91,4 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
       </div>
     </div>
 
-<?php include( $_SERVER['DOCUMENT_ROOT'] . '/templates/footer.php'); ?>
+<?php require_once dirname( __DIR__ ) . '/templates/footer.php'; ?>

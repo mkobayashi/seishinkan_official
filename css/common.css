@@ -308,3 +308,17 @@ body {
     text-align: left;
      display: inline-block;
 }
+
+/* フッターから YouTube 埋め込みを撤去済みでも、本番の古い HTML／キャッシュで iframe が残る場合に非表示 */
+footer iframe[src*="youtube.com"],
+footer iframe[src*="youtu.be"],
+footer #ytplayer {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}

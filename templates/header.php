@@ -1,3 +1,9 @@
+<?php
+/** サイトルート（DOCUMENT_ROOT が親ディレクトリになる環境でも templates と揃う） */
+if ( ! defined( 'SEISHINKAN_ROOT' ) ) {
+	define( 'SEISHINKAN_ROOT', dirname( __DIR__ ) );
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -15,7 +21,7 @@
 <!-- Special CSS（?v= はサーバー上の更新時刻でキャッシュ回避） -->
 <?php
 $_seishinkan_css = '/css/' . cssinc . '.css';
-$_seishinkan_css_fs = $_SERVER['DOCUMENT_ROOT'] . $_seishinkan_css;
+$_seishinkan_css_fs = SEISHINKAN_ROOT . $_seishinkan_css;
 $_seishinkan_css_v = is_file($_seishinkan_css_fs) ? filemtime($_seishinkan_css_fs) : 0;
 ?>
 <link rel="stylesheet" href="<?php echo htmlspecialchars($_seishinkan_css . '?v=' . (int) $_seishinkan_css_v, ENT_QUOTES, 'UTF-8'); ?>" type="text/css">

@@ -2,7 +2,7 @@
 define("cssinc" ,"seishinkan");
 define("description","氣のクラス（氣圧法クラス）の紹介です。初心者の方でも安心して取り組める稽古内容です。");
 define("title","氣のクラス（氣圧法クラス） | クラス紹介｜心身統一合氣道会 成心館道場");
-include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
+require_once dirname( __DIR__ ) . '/templates/header.php'; ?>
 
 <!--　header end contents start -->
     
@@ -200,4 +200,4 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
       </div>
     </div>
 
-<?php include( $_SERVER['DOCUMENT_ROOT'] . '/templates/footer.php'); ?>
+<?php require_once dirname( __DIR__ ) . '/templates/footer.php'; ?>

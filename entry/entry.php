@@ -2,7 +2,7 @@
 define("cssinc" ,"/entry");
 define("description","月会費・入会時費用等のご案内です。");
 define("title","月会費・入会時費用");
-include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
+require_once dirname( __DIR__ ) . '/templates/header.php'; ?>
 
 <!--　header end contents start -->  
     <!-- Local header -->
@@ -130,4 +130,4 @@ include( $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); ?>
     </div>
 
 <!--　contents end footer start -->
- <?php include( $_SERVER['DOCUMENT_ROOT'] . '/templates/footer.php'); ?>
+ <?php require_once dirname( __DIR__ ) . '/templates/footer.php'; ?>
