@@ -69,10 +69,6 @@ $(function(){
         <div class="row footer-address hirakaku-gothic">
             <div class="col-xs-12 col-lg-4">
               <h5>心身統一合氣道会｜成心館道場</h5>
-                <h6><a href="https://www.youtube.com/channel/UCOn7-WmaN3UiLFJwpkL3UCA" target="_blank">成心館公式YouTubeチャンネル</a></h6>
-                <iframe id="ytplayer" type="text/html" width="80%" height="135px"
-src="https://www.youtube.com/embed/TbpA2txMYOE?controls=0"
-                             frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="col-xs-12 col-lg-4 fa-line">
               <h6>成心館道場</h6>
@@ -87,7 +83,6 @@ src="https://www.youtube.com/embed/TbpA2txMYOE?controls=0"
               <ul class="list-unstyled">
                 <li>成心館道場（成城道場）</li>
                 <li>自由が丘教室</li>
-                <li>青山教室</li>
                 <li>赤坂教室</li>
                 <li>お茶の水教室</li>
                 <li>札幌大通教室</li>

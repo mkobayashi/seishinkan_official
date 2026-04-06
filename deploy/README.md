@@ -51,6 +51,13 @@ Secrets（GitHub Actions）:
 - `LOLIPOP_PASS`（FTP パスワード）
 - `LOLIPOP_REMOTE_DIR`（本番でこのプロジェクトを置いているディレクトリ）
 
+#### `LOLIPOP_REMOTE_DIR` がずれていると「更新されない」
+
+管理画面や `http://（アカウント）.main.jp/seishinkan/` で見えている **いまサイトが動いているフォルダ**と、デプロイ先が**同じ物理ディレクトリ**である必要があります。
+
+- 例: 公開が `…/web/seishinkan/` なのに、Actions の Secret が `…/web` だけだと、`class/` や `templates/` が **隣の階層に上がり**、`seishinkan.org` では **古い `header.php` / `footer.php` のまま**に見えます。
+- FTP で `templates/header.php` を直したつもりでも、**別パス**の同名ファイルを触っていると反映されません。ロリポップの「公開フォルダ」表示のパスと Secret を突き合わせてください。
+
 転送モード（`deploy/lolipop_sync.sh`）:
 
 | `LOLIPOP_TRANSFER_MODE` | 用途 |
