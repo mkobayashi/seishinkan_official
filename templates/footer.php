@@ -1,3 +1,10 @@
+<?php
+/**
+ * 共通フッター（page-top〜著作権表示〜wp_footer）
+ *
+ * 編集の正はこのファイルのみ。WordPress テーマの footer.php はここを読み込むラッパーです。
+ */
+?>
 <!-- 共通フッター: 地図用スクリプト → page-top → <footer> -->
     <script>
 $(function(){

@@ -1,5 +1,9 @@
 <?php
-/** サイトルート（DOCUMENT_ROOT が親ディレクトリになる環境でも templates と揃う） */
+/**
+ * サイト共通ヘッダー（ナビ・CSS・wp_head の直前まで）
+ *
+ * 編集の正はこのファイルのみ。WordPress テーマの header.php はここを読み込むラッパーです。
+ */
 if ( ! defined( 'SEISHINKAN_ROOT' ) ) {
 	define( 'SEISHINKAN_ROOT', dirname( __DIR__ ) );
 }
@@ -56,7 +60,15 @@ $_seishinkan_css_v = is_file($_seishinkan_css_fs) ? filemtime($_seishinkan_css_f
 <!-- Crossfader（スライダーは jQuery crossFader + lheader-fade.js。古い bsn.Crossfader + img1〜4 のデモは削除） -->
 <script src="/js/jquery.crossFader.js"></script>
 <script src="/js/lheader-fade.js"></script>
-<?php if (function_exists('wp_head')) { wp_head(); } ?>
+<!-- Google Analytics（静的ページ・WP 共通） -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S6R1XL99XF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S6R1XL99XF');
+</script>
+<?php if ( function_exists( 'wp_head' ) ) { wp_head(); } ?>
   </head>
   
   <body>

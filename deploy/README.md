@@ -42,7 +42,7 @@ DRY_RUN=1 bash deploy/heteml_sync.sh
 **問題ありません。** ロリポップの **FTP / FTPS**（接続先 `ftp.lolipop.jp`）だけでファイル転送できます。シェルにログインする「SSH」と、転送プロトコル名としての「SFTP」は別です。プランによっては SFTP という語が出ず、FTPS だけの案内になっていることもあります。
 
 - **自動デプロイ**: `deploy/lolipop_sync.sh` の既定は **`LOLIPOP_TRANSFER_MODE=ftps`**（TLS 付き FTP）です。GitHub Actions のワークフローも `ftps` 固定です。
-- **手動で上書き**: もちろん可能です。FileZilla 等で **FTPS** 接続し、`lolipop_sync.sh` の `INCLUDES` と同じフォルダ・ファイルをリモートの `LOLIPOP_REMOTE_DIR` 配下に上げれば同じ結果になります。WordPress テーマは `wp/wp-content/themes/seishinkan/` も別途アップロードが必要です（同期スクリプトは `wp/` を含めていません）。
+- **手動で上書き**: もちろん可能です。FileZilla 等で **FTPS** 接続し、`lolipop_sync.sh` の `INCLUDES` と同じフォルダ・ファイルをリモートの `LOLIPOP_REMOTE_DIR` 配下に上げれば同じ結果になります。WordPress テーマは `wp/wp-content/themes/seishinkan/` も別途アップロードが必要です（同期スクリプトは `wp/` を含めていません）。テーマの `header.php` / `footer.php` は **サイトルートの `templates/header.php` と `templates/footer.php` を読み込む**ため、本番でも **`templates/` と `wp/` が同じ公開ルート配下**にある必要があります。
 
 Secrets（GitHub Actions）:
 
